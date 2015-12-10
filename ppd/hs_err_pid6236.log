@@ -1,0 +1,1358 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f5a95367c56, pid=6236, tid=140028014061312
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_66-b17) (build 1.8.0_66-b17)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.66-b17 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# C  [libstdc++.so.6+0x74c56]  std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)+0x76
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f5ac800c000):  JavaThread "main" [_thread_in_native, id=6241, stack(0x00007f5acff96000,0x00007f5ad0097000)]
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 1 (SEGV_MAPERR), si_addr: 0x00007f5a00000004
+
+Registers:
+RAX=0x00007f5a00000004, RBX=0x00007f5ac842bdd0, RCX=0x00007f5a95816328, RDX=0x00007f5ac81e9540
+RSP=0x00007f5ad0095250, RBP=0x00007f5a22ffa1c0, RSI=0x00007f5a22ffa380, RDI=0x0000000000000001
+R8 =0x0000000000000002, R9 =0x00007f5ac8000078, R10=0x00007f5a958166a0, R11=0x00007f5acf626a30
+R12=0x00007f5a22ffa380, R13=0x00007f5a95816328, R14=0x00007f5a95816330, R15=0x00007f5a22ffa1c0
+RIP=0x00007f5a95367c56, EFLAGS=0x0000000000010202, CSGSFS=0x0000000000000033, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007f5ad0095250)
+0x00007f5ad0095250:   00007f5ac842bdd0 00007f5a95816320
+0x00007f5ad0095260:   00007f5ad0095320 00007f5a95816328
+0x00007f5ad0095270:   00007f5a22ffa380 00007f5a9560a029
+0x00007f5ad0095280:   0000000000000000 0000000000000000
+0x00007f5ad0095290:   0000000000000018 0000000000000000
+0x00007f5ad00952a0:   00007f5ad00952d0 00007f5a22ffa210
+0x00007f5ad00952b0:   0000000000000001 00007f5a226935d0
+0x00007f5ad00952c0:   00007f5ac807b8c0 0000000000000001
+0x00007f5ad00952d0:   00007f5ac800c1f8 00007f5a95609a0b
+0x00007f5ad00952e0:   0000000000000002 00007f5a22f00320
+0x00007f5ad00952f0:   0000000000000000 0000000100000002
+0x00007f5ad0095300:   00007f5a00000000 00007f5ad00953a0
+0x00007f5ad0095310:   0000000000000000 00007f5a9560734b
+0x00007f5ad0095320:   00007f5a22ffa210 0000000000000000
+0x00007f5ad0095330:   0000000000000002 000000075f21f3d0
+0x00007f5ad0095340:   00007f5ad00953c0 0000000000000000
+0x00007f5ad0095350:   0000000000000001 00007f5ad00953b0
+0x00007f5ad0095360:   00007f5ac800c000 00007f5ab93881e8
+0x00007f5ad0095370:   0000000000000000 00007f5ad00953a8
+0x00007f5ad0095380:   000000075f21f390 000000075f21f368
+0x00007f5ad0095390:   000000075f21f4d8 0000000000000000
+0x00007f5ad00953a0:   0000000000000000 000000075f21f4f0
+0x00007f5ad00953b0:   000000063041c018 000000063041c018
+0x00007f5ad00953c0:   000000063041c018 00007f5ab939b7a0
+0x00007f5ad00953d0:   000000075f21f390 00007f5a00000001
+0x00007f5ad00953e0:   000000075f21f4d8 0000000000000000
+0x00007f5ad00953f0:   0000000000000000 000000075f21f4f0
+0x00007f5ad0095400:   0000000000000000 000000075f21f368
+0x00007f5ad0095410:   000000075f21f3b8 00007f5a00000000
+0x00007f5ad0095420:   00007f5ad0095628 00007f5ad00955e8
+0x00007f5ad0095430:   0000000000000002 00007f5ab934d3c8
+0x00007f5ad0095440:   00007f5ab90055d0 00007f5ab64336e8 
+
+Instructions: (pc=0x00007f5a95367c56)
+0x00007f5a95367c36:   d4 74 47 49 8b 5c 24 08 8b 03 85 c0 75 3c 48 8b
+0x00007f5a95367c46:   6b 08 48 8b 45 10 48 39 c3 74 7f 48 85 c0 74 4a
+0x00007f5a95367c56:   8b 08 85 c9 75 44 49 89 ec c7 03 01 00 00 00 c7
+0x00007f5a95367c66:   00 01 00 00 00 49 39 d4 c7 45 00 00 00 00 00 75 
+
+Register to memory mapping:
+
+RAX=0x00007f5a00000004 is an unknown value
+RBX=0x00007f5ac842bdd0 is an unknown value
+RCX=0x00007f5a95816328: contextCallbackMap+0x8 in /tmp/libJOCL_0_1_9-linux-x86_64.so at 0x00007f5a955f7000
+RDX=0x00007f5ac81e9540 is an unknown value
+RSP=0x00007f5ad0095250 is pointing into the stack for thread: 0x00007f5ac800c000
+RBP=0x00007f5a22ffa1c0 is an unknown value
+RSI=0x00007f5a22ffa380 is an unknown value
+RDI=0x0000000000000001 is an unknown value
+R8 =0x0000000000000002 is an unknown value
+R9 =0x00007f5ac8000078 is an unknown value
+R10=0x00007f5a958166a0: clCreateContextFP+0 in /tmp/libJOCL_0_1_9-linux-x86_64.so at 0x00007f5a955f7000
+R11=0x00007f5acf626a30: <offset 0x187a30> in /lib/x86_64-linux-gnu/libc.so.6 at 0x00007f5acf49f000
+R12=0x00007f5a22ffa380 is an unknown value
+R13=0x00007f5a95816328: contextCallbackMap+0x8 in /tmp/libJOCL_0_1_9-linux-x86_64.so at 0x00007f5a955f7000
+R14=0x00007f5a95816330: contextCallbackMap+0x10 in /tmp/libJOCL_0_1_9-linux-x86_64.so at 0x00007f5a955f7000
+R15=0x00007f5a22ffa1c0 is an unknown value
+
+
+Stack: [0x00007f5acff96000,0x00007f5ad0097000],  sp=0x00007f5ad0095250,  free space=1020k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libstdc++.so.6+0x74c56]  std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)+0x76
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+J 751  org.jocl.CL.clCreateContextNative(Lorg/jocl/cl_context_properties;I[Lorg/jocl/cl_device_id;Lorg/jocl/CreateContextFunction;Ljava/lang/Object;[I)Lorg/jocl/cl_context; (0 bytes) @ 0x00007f5ab938816e [0x00007f5ab93880c0+0xae]
+J 790 C2 org.jocl.CL.clCreateContext(Lorg/jocl/cl_context_properties;I[Lorg/jocl/cl_device_id;Lorg/jocl/CreateContextFunction;Ljava/lang/Object;[I)Lorg/jocl/cl_context; (56 bytes) @ 0x00007f5ab939b7a0 [0x00007f5ab939b6e0+0xc0]
+J 636 C2 br.ufg.inf.ppd.tarefa.TarefaGPUOpenCL.processarJuncao(Ljava/util/List;Ljava/util/List;)Ljava/util/Collection; (1047 bytes) @ 0x00007f5ab934d3c8 [0x00007f5ab934cd40+0x688]
+j  br.ufg.inf.ppd.tarefa.Tarefa.lambda$1(Ljava/util/List;Ljava/util/List;Ljava/io/File;)V+162
+j  br.ufg.inf.ppd.tarefa.Tarefa$$Lambda$10.accept(Ljava/lang/Object;)V+16
+j  java.util.Spliterators$ArraySpliterator.forEachRemaining(Ljava/util/function/Consumer;)V+53
+j  java.util.stream.ReferencePipeline$Head.forEach(Ljava/util/function/Consumer;)V+12
+j  br.ufg.inf.ppd.tarefa.Tarefa.processarSubArquivos(Ljava/util/List;[Ljava/io/File;)Ljava/util/List;+20
+j  br.ufg.inf.ppd.tarefa.Tarefa.executar()V+237
+j  br.ufg.inf.ppd.app.Main.main([Ljava/lang/String;)V+6
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00007f5ac80dc800 JavaThread "Service Thread" daemon [_thread_blocked, id=6263, stack(0x00007f5ab40d9000,0x00007f5ab41da000)]
+  0x00007f5ac80cf000 JavaThread "C1 CompilerThread2" daemon [_thread_blocked, id=6262, stack(0x00007f5ab41da000,0x00007f5ab42db000)]
+  0x00007f5ac80cd800 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=6261, stack(0x00007f5ab42db000,0x00007f5ab43dc000)]
+  0x00007f5ac80ca800 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=6260, stack(0x00007f5ab43dc000,0x00007f5ab44dd000)]
+  0x00007f5a84001000 JavaThread "JDWP Command Reader" daemon [_thread_in_native, id=6257, stack(0x00007f5ab44dd000,0x00007f5ab45de000)]
+  0x00007f5ac80c8000 JavaThread "JDWP Event Helper Thread" daemon [_thread_blocked, id=6256, stack(0x00007f5ab45de000,0x00007f5ab46df000)]
+  0x00007f5ac80c4800 JavaThread "JDWP Transport Listener: dt_socket" daemon [_thread_blocked, id=6253, stack(0x00007f5ab46df000,0x00007f5ab47e0000)]
+  0x00007f5ac80b8800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=6251, stack(0x00007f5ab49e4000,0x00007f5ab4ae5000)]
+  0x00007f5ac8081000 JavaThread "Finalizer" daemon [_thread_blocked, id=6249, stack(0x00007f5ab4ae5000,0x00007f5ab4be6000)]
+  0x00007f5ac807f000 JavaThread "Reference Handler" daemon [_thread_blocked, id=6248, stack(0x00007f5ab4be6000,0x00007f5ab4ce7000)]
+=>0x00007f5ac800c000 JavaThread "main" [_thread_in_native, id=6241, stack(0x00007f5acff96000,0x00007f5ad0097000)]
+
+Other Threads:
+  0x00007f5ac807a000 VMThread [stack: 0x00007f5ab4ce7000,0x00007f5ab4de8000] [id=6247]
+  0x00007f5ac80df800 WatcherThread [stack: 0x00007f5a95c3f000,0x00007f5a95d40000] [id=6264]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 2185728K, used 905585K [0x0000000728d80000, 0x00000007b0e00000, 0x00000007c0000000)
+  eden space 2148864K, 42% used [0x0000000728d80000,0x000000075ff37098,0x00000007ac000000)
+  from space 36864K, 7% used [0x00000007aea00000,0x00000007aeca54f0,0x00000007b0e00000)
+  to   space 39936K, 0% used [0x00000007ac000000,0x00000007ac000000,0x00000007ae700000)
+ ParOldGen       total 1227776K, used 910375K [0x00000005fa800000, 0x0000000645700000, 0x0000000728d80000)
+  object space 1227776K, 74% used [0x00000005fa800000,0x0000000632109ff8,0x0000000645700000)
+ Metaspace       used 6015K, capacity 6242K, committed 6400K, reserved 1056768K
+  class space    used 674K, capacity 750K, committed 768K, reserved 1048576K
+
+Card table byte_map: [0x00007f5ab81d3000,0x00007f5ab9000000] byte_map_base: 0x00007f5ab51ff000
+
+Marking Bits: (ParMarkBitMap*) 0x00007f5acf474020
+ Begin Bits: [0x00007f5a95d40000, 0x00007f5a9cea0000)
+ End Bits:   [0x00007f5a9cea0000, 0x00007f5aa4000000)
+
+Polling page: 0x00007f5ad00bb000
+
+CodeCache: size=245760Kb used=3784Kb max_used=3827Kb free=241975Kb
+ bounds [0x00007f5ab9000000, 0x00007f5ab93d0000, 0x00007f5ac8000000]
+ total_blobs=1129 nmethods=815 adapters=236
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 520,142 Thread 0x00007f5ac80ca800  822       4       org.magicwerk.brownies.collections.BigList::finalize (28 bytes)
+Event: 520,142 Thread 0x00007f5ac80cd800  820   !   4       java.lang.ref.Finalizer::runFinalizer (62 bytes)
+Event: 520,147 Thread 0x00007f5ac80ca800 nmethod 822 0x00007f5ab93a6f10 code [0x00007f5ab93a7080, 0x00007f5ab93a72d8]
+Event: 520,147 Thread 0x00007f5ac80ca800  821   !   4       java.lang.ref.Finalizer::remove (94 bytes)
+Event: 520,150 Thread 0x00007f5ac80ca800 nmethod 821 0x00007f5ab93a4d50 code [0x00007f5ab93a4ec0, 0x00007f5ab93a51b8]
+Event: 520,154 Thread 0x00007f5ac80cd800 nmethod 820 0x00007f5ab93b7690 code [0x00007f5ab93b7860, 0x00007f5ab93b81b8]
+Event: 537,358 Thread 0x00007f5ac80ca800  823 % !   4       java.lang.ref.Reference$ReferenceHandler::run @ 0 (102 bytes)
+Event: 537,361 Thread 0x00007f5ac80cd800  824 % !   4       java.lang.ref.Finalizer$FinalizerThread::run @ 33 (55 bytes)
+Event: 537,375 Thread 0x00007f5ac80cd800 nmethod 824% 0x00007f5ab93c0290 code [0x00007f5ab93c0440, 0x00007f5ab93c0d78]
+Event: 537,375 Thread 0x00007f5ac80ca800 nmethod 823% 0x00007f5ab93bc8d0 code [0x00007f5ab93bcac0, 0x00007f5ab93bd7d8]
+
+GC Heap History (10 events):
+Event: 611,368 GC heap before
+{Heap before GC invocations=68 (full 4):
+ PSYoungGen      total 2198016K, used 2139285K [0x0000000728d80000, 0x00000007b2800000, 0x00000007c0000000)
+  eden space 2136576K, 100% used [0x0000000728d80000,0x00000007ab400000,0x00000007ab400000)
+  from space 61440K, 4% used [0x00000007ab400000,0x00000007ab6a54f0,0x00000007af000000)
+  to   space 57344K, 0% used [0x00000007af000000,0x00000007af000000,0x00000007b2800000)
+ ParOldGen       total 1227776K, used 910375K [0x00000005fa800000, 0x0000000645700000, 0x0000000728d80000)
+  object space 1227776K, 74% used [0x00000005fa800000,0x0000000632109ff8,0x0000000645700000)
+ Metaspace       used 6015K, capacity 6242K, committed 6400K, reserved 1056768K
+  class space    used 674K, capacity 750K, committed 768K, reserved 1048576K
+Event: 611,380 GC heap after
+Heap after GC invocations=68 (full 4):
+ PSYoungGen      total 2189824K, used 2709K [0x0000000728d80000, 0x00000007b2000000, 0x00000007c0000000)
+  eden space 2140672K, 0% used [0x0000000728d80000,0x0000000728d80000,0x00000007ab800000)
+  from space 49152K, 5% used [0x00000007af000000,0x00000007af2a54f0,0x00000007b2000000)
+  to   space 53248K, 0% used [0x00000007ab800000,0x00000007ab800000,0x00000007aec00000)
+ ParOldGen       total 1227776K, used 910375K [0x00000005fa800000, 0x0000000645700000, 0x0000000728d80000)
+  object space 1227776K, 74% used [0x00000005fa800000,0x0000000632109ff8,0x0000000645700000)
+ Metaspace       used 6015K, capacity 6242K, committed 6400K, reserved 1056768K
+  class space    used 674K, capacity 750K, committed 768K, reserved 1048576K
+}
+Event: 616,404 GC heap before
+{Heap before GC invocations=69 (full 4):
+ PSYoungGen      total 2189824K, used 2143381K [0x0000000728d80000, 0x00000007b2000000, 0x00000007c0000000)
+  eden space 2140672K, 100% used [0x0000000728d80000,0x00000007ab800000,0x00000007ab800000)
+  from space 49152K, 5% used [0x00000007af000000,0x00000007af2a54f0,0x00000007b2000000)
+  to   space 53248K, 0% used [0x00000007ab800000,0x00000007ab800000,0x00000007aec00000)
+ ParOldGen       total 1227776K, used 910375K [0x00000005fa800000, 0x0000000645700000, 0x0000000728d80000)
+  object space 1227776K, 74% used [0x00000005fa800000,0x0000000632109ff8,0x0000000645700000)
+ Metaspace       used 6015K, capacity 6242K, committed 6400K, reserved 1056768K
+  class space    used 674K, capacity 750K, committed 768K, reserved 1048576K
+Event: 616,413 GC heap after
+Heap after GC invocations=69 (full 4):
+ PSYoungGen      total 2193920K, used 2709K [0x0000000728d80000, 0x00000007b1d00000, 0x00000007c0000000)
+  eden space 2140672K, 0% used [0x0000000728d80000,0x0000000728d80000,0x00000007ab800000)
+  from space 53248K, 5% used [0x00000007ab800000,0x00000007abaa54f0,0x00000007aec00000)
+  to   space 49664K, 0% used [0x00000007aec80000,0x00000007aec80000,0x00000007b1d00000)
+ ParOldGen       total 1227776K, used 910375K [0x00000005fa800000, 0x0000000645700000, 0x0000000728d80000)
+  object space 1227776K, 74% used [0x00000005fa800000,0x0000000632109ff8,0x0000000645700000)
+ Metaspace       used 6015K, capacity 6242K, committed 6400K, reserved 1056768K
+  class space    used 674K, capacity 750K, committed 768K, reserved 1048576K
+}
+Event: 621,057 GC heap before
+{Heap before GC invocations=70 (full 4):
+ PSYoungGen      total 2193920K, used 2143381K [0x0000000728d80000, 0x00000007b1d00000, 0x00000007c0000000)
+  eden space 2140672K, 100% used [0x0000000728d80000,0x00000007ab800000,0x00000007ab800000)
+  from space 53248K, 5% used [0x00000007ab800000,0x00000007abaa54f0,0x00000007aec00000)
+  to   space 49664K, 0% used [0x00000007aec80000,0x00000007aec80000,0x00000007b1d00000)
+ ParOldGen       total 1227776K, used 910375K [0x00000005fa800000, 0x0000000645700000, 0x0000000728d80000)
+  object space 1227776K, 74% used [0x00000005fa800000,0x0000000632109ff8,0x0000000645700000)
+ Metaspace       used 6015K, capacity 6242K, committed 6400K, reserved 1056768K
+  class space    used 674K, capacity 750K, committed 768K, reserved 1048576K
+Event: 621,069 GC heap after
+Heap after GC invocations=70 (full 4):
+ PSYoungGen      total 2187264K, used 2592K [0x0000000728d80000, 0x00000007b1600000, 0x00000007c0000000)
+  eden space 2144768K, 0% used [0x0000000728d80000,0x0000000728d80000,0x00000007abc00000)
+  from space 42496K, 6% used [0x00000007aec80000,0x00000007aef08000,0x00000007b1600000)
+  to   space 46080K, 0% used [0x00000007abc00000,0x00000007abc00000,0x00000007ae900000)
+ ParOldGen       total 1227776K, used 910375K [0x00000005fa800000, 0x0000000645700000, 0x0000000728d80000)
+  object space 1227776K, 74% used [0x00000005fa800000,0x0000000632109ff8,0x0000000645700000)
+ Metaspace       used 6015K, capacity 6242K, committed 6400K, reserved 1056768K
+  class space    used 674K, capacity 750K, committed 768K, reserved 1048576K
+}
+Event: 626,914 GC heap before
+{Heap before GC invocations=71 (full 4):
+ PSYoungGen      total 2187264K, used 2147360K [0x0000000728d80000, 0x00000007b1600000, 0x00000007c0000000)
+  eden space 2144768K, 100% used [0x0000000728d80000,0x00000007abc00000,0x00000007abc00000)
+  from space 42496K, 6% used [0x00000007aec80000,0x00000007aef08000,0x00000007b1600000)
+  to   space 46080K, 0% used [0x00000007abc00000,0x00000007abc00000,0x00000007ae900000)
+ ParOldGen       total 1227776K, used 910375K [0x00000005fa800000, 0x0000000645700000, 0x0000000728d80000)
+  object space 1227776K, 74% used [0x00000005fa800000,0x0000000632109ff8,0x0000000645700000)
+ Metaspace       used 6015K, capacity 6242K, committed 6400K, reserved 1056768K
+  class space    used 674K, capacity 750K, committed 768K, reserved 1048576K
+Event: 626,926 GC heap after
+Heap after GC invocations=71 (full 4):
+ PSYoungGen      total 2190848K, used 2663K [0x0000000728d80000, 0x00000007b1400000, 0x00000007c0000000)
+  eden space 2144768K, 0% used [0x0000000728d80000,0x0000000728d80000,0x00000007abc00000)
+  from space 46080K, 5% used [0x00000007abc00000,0x00000007abe99c50,0x00000007ae900000)
+  to   space 43008K, 0% used [0x00000007aea00000,0x00000007aea00000,0x00000007b1400000)
+ ParOldGen       total 1227776K, used 910375K [0x00000005fa800000, 0x0000000645700000, 0x0000000728d80000)
+  object space 1227776K, 74% used [0x00000005fa800000,0x0000000632109ff8,0x0000000645700000)
+ Metaspace       used 6015K, capacity 6242K, committed 6400K, reserved 1056768K
+  class space    used 674K, capacity 750K, committed 768K, reserved 1048576K
+}
+Event: 632,751 GC heap before
+{Heap before GC invocations=72 (full 4):
+ PSYoungGen      total 2190848K, used 2147431K [0x0000000728d80000, 0x00000007b1400000, 0x00000007c0000000)
+  eden space 2144768K, 100% used [0x0000000728d80000,0x00000007abc00000,0x00000007abc00000)
+  from space 46080K, 5% used [0x00000007abc00000,0x00000007abe99c50,0x00000007ae900000)
+  to   space 43008K, 0% used [0x00000007aea00000,0x00000007aea00000,0x00000007b1400000)
+ ParOldGen       total 1227776K, used 910375K [0x00000005fa800000, 0x0000000645700000, 0x0000000728d80000)
+  object space 1227776K, 74% used [0x00000005fa800000,0x0000000632109ff8,0x0000000645700000)
+ Metaspace       used 6015K, capacity 6242K, committed 6400K, reserved 1056768K
+  class space    used 674K, capacity 750K, committed 768K, reserved 1048576K
+Event: 632,764 GC heap after
+Heap after GC invocations=72 (full 4):
+ PSYoungGen      total 2185728K, used 2709K [0x0000000728d80000, 0x00000007b0e00000, 0x00000007c0000000)
+  eden space 2148864K, 0% used [0x0000000728d80000,0x0000000728d80000,0x00000007ac000000)
+  from space 36864K, 7% used [0x00000007aea00000,0x00000007aeca54f0,0x00000007b0e00000)
+  to   space 39936K, 0% used [0x00000007ac000000,0x00000007ac000000,0x00000007ae700000)
+ ParOldGen       total 1227776K, used 910375K [0x00000005fa800000, 0x0000000645700000, 0x0000000728d80000)
+  object space 1227776K, 74% used [0x00000005fa800000,0x0000000632109ff8,0x0000000645700000)
+ Metaspace       used 6015K, capacity 6242K, committed 6400K, reserved 1056768K
+  class space    used 674K, capacity 750K, committed 768K, reserved 1048576K
+}
+
+Deoptimization events (10 events):
+Event: 634,704 Thread 0x00007f5ac800c000 Uncommon trap: reason=unhandled action=none pc=0x00007f5ab939a170 method=org.jocl.CL.checkResult(I)I @ 22
+Event: 634,704 Thread 0x00007f5ac800c000 Uncommon trap: reason=unhandled action=none pc=0x00007f5ab939a170 method=org.jocl.CL.checkResult(I)I @ 22
+Event: 634,705 Thread 0x00007f5ac800c000 Uncommon trap: reason=unhandled action=none pc=0x00007f5ab939a170 method=org.jocl.CL.checkResult(I)I @ 22
+Event: 634,705 Thread 0x00007f5ac800c000 Uncommon trap: reason=unhandled action=none pc=0x00007f5ab939a170 method=org.jocl.CL.checkResult(I)I @ 22
+Event: 634,705 Thread 0x00007f5ac800c000 Uncommon trap: reason=unhandled action=none pc=0x00007f5ab939a170 method=org.jocl.CL.checkResult(I)I @ 22
+Event: 634,706 Thread 0x00007f5ac800c000 Uncommon trap: reason=unhandled action=none pc=0x00007f5ab939a170 method=org.jocl.CL.checkResult(I)I @ 22
+Event: 634,706 Thread 0x00007f5ac800c000 Uncommon trap: reason=unhandled action=none pc=0x00007f5ab939a170 method=org.jocl.CL.checkResult(I)I @ 22
+Event: 634,706 Thread 0x00007f5ac800c000 Uncommon trap: reason=unhandled action=none pc=0x00007f5ab939a170 method=org.jocl.CL.checkResult(I)I @ 22
+Event: 634,707 Thread 0x00007f5ac800c000 Uncommon trap: reason=unhandled action=none pc=0x00007f5ab939a170 method=org.jocl.CL.checkResult(I)I @ 22
+Event: 634,707 Thread 0x00007f5ac800c000 Uncommon trap: reason=unhandled action=none pc=0x00007f5ab939a170 method=org.jocl.CL.checkResult(I)I @ 22
+
+Internal exceptions (9 events):
+Event: 0,040 Thread 0x00007f5ac800c000 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.defineClass(Ljava/lang/String;[BII)Ljava/lang/Class; name or signature does not match> (0x0000000728d92b98) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u66/4988/hotspot/src/shar
+Event: 0,040 Thread 0x00007f5ac800c000 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.prefetchRead(Ljava/lang/Object;J)V name or signature does not match> (0x0000000728d92e80) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u66/4988/hotspot/src/share/vm/prims/jni.cpp
+Event: 8,428 Thread 0x00007f5ac800c000 Exception <a 'java/security/PrivilegedActionException'> (0x0000000728e18440) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u66/4988/hotspot/src/share/vm/prims/jvm.cpp, line 1386]
+Event: 8,428 Thread 0x00007f5ac800c000 Exception <a 'java/security/PrivilegedActionException'> (0x0000000728e18650) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u66/4988/hotspot/src/share/vm/prims/jvm.cpp, line 1386]
+Event: 8,428 Thread 0x00007f5ac800c000 Exception <a 'java/security/PrivilegedActionException'> (0x0000000728e1aa90) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u66/4988/hotspot/src/share/vm/prims/jvm.cpp, line 1386]
+Event: 8,428 Thread 0x00007f5ac800c000 Exception <a 'java/security/PrivilegedActionException'> (0x0000000728e1aca0) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u66/4988/hotspot/src/share/vm/prims/jvm.cpp, line 1386]
+Event: 33,331 Thread 0x00007f5ac800c000 Exception <a 'java/lang/NoSuchFieldError': method resolution failed> (0x00000007606650f0) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u66/4988/hotspot/src/share/vm/prims/methodHandles.cpp, line 1146]
+Event: 33,341 Thread 0x00007f5ac800c000 Exception <a 'java/lang/NoSuchFieldError': method resolution failed> (0x0000000760672490) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u66/4988/hotspot/src/share/vm/prims/methodHandles.cpp, line 1146]
+Event: 125,096 Thread 0x00007f5ac800c000 Implicit null exception at 0x00007f5ab91a6630 to 0x00007f5ab91a6809
+
+Events (10 events):
+Event: 634,707 Thread 0x00007f5ac800c000 Uncommon trap: trap_request=0xffffffa7 fr.pc=0x00007f5ab939a170
+Event: 634,707 Thread 0x00007f5ac800c000 DEOPT PACKING pc=0x00007f5ab939a170 sp=0x00007f5ad00953e0
+Event: 634,707 Thread 0x00007f5ac800c000 DEOPT UNPACKING pc=0x00007f5ab9005229 sp=0x00007f5ad0095350 mode 2
+Event: 634,707 Thread 0x00007f5ac800c000 DEOPT PACKING pc=0x00007f5ab934d3ec sp=0x00007f5ad0095440
+Event: 634,707 Thread 0x00007f5ac800c000 DEOPT UNPACKING pc=0x00007f5ab9047633 sp=0x00007f5ad00951a0 mode 1
+Event: 634,707 Thread 0x00007f5ac800c000 Uncommon trap: trap_request=0xffffffa7 fr.pc=0x00007f5ab939a170
+Event: 634,707 Thread 0x00007f5ac800c000 DEOPT PACKING pc=0x00007f5ab939a170 sp=0x00007f5ad00953e0
+Event: 634,707 Thread 0x00007f5ac800c000 DEOPT UNPACKING pc=0x00007f5ab9005229 sp=0x00007f5ad0095350 mode 2
+Event: 634,707 Thread 0x00007f5ac800c000 DEOPT PACKING pc=0x00007f5ab934d3ec sp=0x00007f5ad0095440
+Event: 634,707 Thread 0x00007f5ac800c000 DEOPT UNPACKING pc=0x00007f5ab9047633 sp=0x00007f5ad00951a0 mode 1
+
+
+Dynamic libraries:
+00400000-00401000 r-xp 00000000 08:08 5769732                            /usr/lib/jvm/java-8-oracle/bin/java
+00600000-00601000 rw-p 00000000 08:08 5769732                            /usr/lib/jvm/java-8-oracle/bin/java
+01124000-01940000 rw-p 00000000 00:00 0                                  [heap]
+5fa800000-645700000 rw-p 00000000 00:00 0 
+645700000-728d80000 ---p 00000000 00:00 0 
+728d80000-7b0e00000 rw-p 00000000 00:00 0 
+7b0e00000-7c0000000 ---p 00000000 00:00 0 
+7c0000000-7c00c0000 rw-p 00000000 00:00 0 
+7c00c0000-800000000 ---p 00000000 00:00 0 
+ec00000000-ed00000000 ---p 00000000 00:00 0 
+7f5a1c000000-7f5a22ffc000 rw-p 00000000 00:00 0 
+7f5a22ffc000-7f5a24000000 ---p 00000000 00:00 0 
+7f5a24000000-7f5a24c11000 rw-p 00000000 00:00 0 
+7f5a24c11000-7f5a28000000 ---p 00000000 00:00 0 
+7f5a28000000-7f5a28c11000 rw-p 00000000 00:00 0 
+7f5a28c11000-7f5a2c000000 ---p 00000000 00:00 0 
+7f5a2c000000-7f5a2cc11000 rw-p 00000000 00:00 0 
+7f5a2cc11000-7f5a30000000 ---p 00000000 00:00 0 
+7f5a30000000-7f5a30c11000 rw-p 00000000 00:00 0 
+7f5a30c11000-7f5a34000000 ---p 00000000 00:00 0 
+7f5a34000000-7f5a34c11000 rw-p 00000000 00:00 0 
+7f5a34c11000-7f5a38000000 ---p 00000000 00:00 0 
+7f5a38000000-7f5a38c11000 rw-p 00000000 00:00 0 
+7f5a38c11000-7f5a3c000000 ---p 00000000 00:00 0 
+7f5a3c000000-7f5a3cc11000 rw-p 00000000 00:00 0 
+7f5a3cc11000-7f5a40000000 ---p 00000000 00:00 0 
+7f5a40000000-7f5a40c14000 rw-p 00000000 00:00 0 
+7f5a40c14000-7f5a44000000 ---p 00000000 00:00 0 
+7f5a44000000-7f5a44c11000 rw-p 00000000 00:00 0 
+7f5a44c11000-7f5a48000000 ---p 00000000 00:00 0 
+7f5a48000000-7f5a48c11000 rw-p 00000000 00:00 0 
+7f5a48c11000-7f5a4c000000 ---p 00000000 00:00 0 
+7f5a4c000000-7f5a4cc11000 rw-p 00000000 00:00 0 
+7f5a4cc11000-7f5a50000000 ---p 00000000 00:00 0 
+7f5a50000000-7f5a50c11000 rw-p 00000000 00:00 0 
+7f5a50c11000-7f5a54000000 ---p 00000000 00:00 0 
+7f5a54000000-7f5a55308000 rw-p 00000000 00:00 0 
+7f5a55308000-7f5a58000000 ---p 00000000 00:00 0 
+7f5a58e8a000-7f5a58e8b000 ---p 00000000 00:00 0 
+7f5a58e8b000-7f5a58ecb000 rw-p 00000000 00:00 0 
+7f5a58ecb000-7f5a58ecc000 ---p 00000000 00:00 0 
+7f5a58ecc000-7f5a58f0c000 rw-p 00000000 00:00 0 
+7f5a58f0c000-7f5a58f2c000 rw-s 0444b000 00:05 12127                      /dev/ati/card0
+7f5a58f2c000-7f5a58f4c000 rw-s 0444a000 00:05 12127                      /dev/ati/card0
+7f5a58f4c000-7f5a58f4e000 rw-s 04449000 00:05 12127                      /dev/ati/card0
+7f5a58f4e000-7f5a58f50000 rw-s 04448000 00:05 12127                      /dev/ati/card0
+7f5a58f50000-7f5a58f56000 rw-s 04447000 00:05 12127                      /dev/ati/card0
+7f5a58f56000-7f5a58f5c000 rw-s 04446000 00:05 12127                      /dev/ati/card0
+7f5a58f5c000-7f5a58f5d000 ---p 00000000 00:00 0 
+7f5a58f5d000-7f5a58f9d000 rw-p 00000000 00:00 0                          [stack:6483]
+7f5a58f9d000-7f5a58fbd000 rw-s 04442000 00:05 12127                      /dev/ati/card0
+7f5a58fbd000-7f5a58fdd000 rw-s 04441000 00:05 12127                      /dev/ati/card0
+7f5a58fdd000-7f5a58fdf000 rw-s 04440000 00:05 12127                      /dev/ati/card0
+7f5a58fdf000-7f5a58fe1000 rw-s 0443f000 00:05 12127                      /dev/ati/card0
+7f5a58fe1000-7f5a58fe7000 rw-s 0443e000 00:05 12127                      /dev/ati/card0
+7f5a58fe7000-7f5a58fed000 rw-s 0443d000 00:05 12127                      /dev/ati/card0
+7f5a58fed000-7f5a58fee000 ---p 00000000 00:00 0 
+7f5a58fee000-7f5a5902e000 rw-p 00000000 00:00 0                          [stack:6482]
+7f5a5902e000-7f5a5904e000 rw-s 04439000 00:05 12127                      /dev/ati/card0
+7f5a5904e000-7f5a5906e000 rw-s 04438000 00:05 12127                      /dev/ati/card0
+7f5a5906e000-7f5a59070000 rw-s 04437000 00:05 12127                      /dev/ati/card0
+7f5a59070000-7f5a59072000 rw-s 04436000 00:05 12127                      /dev/ati/card0
+7f5a59072000-7f5a59078000 rw-s 04435000 00:05 12127                      /dev/ati/card0
+7f5a59078000-7f5a5907e000 rw-s 04434000 00:05 12127                      /dev/ati/card0
+7f5a5907e000-7f5a5907f000 ---p 00000000 00:00 0 
+7f5a5907f000-7f5a590bf000 rw-p 00000000 00:00 0                          [stack:6481]
+7f5a590bf000-7f5a590df000 rw-s 04430000 00:05 12127                      /dev/ati/card0
+7f5a590df000-7f5a590ff000 rw-s 0442f000 00:05 12127                      /dev/ati/card0
+7f5a590ff000-7f5a59101000 rw-s 0442e000 00:05 12127                      /dev/ati/card0
+7f5a59101000-7f5a59103000 rw-s 0442d000 00:05 12127                      /dev/ati/card0
+7f5a59103000-7f5a59109000 rw-s 0442c000 00:05 12127                      /dev/ati/card0
+7f5a59109000-7f5a5910f000 rw-s 0442b000 00:05 12127                      /dev/ati/card0
+7f5a5910f000-7f5a59110000 ---p 00000000 00:00 0 
+7f5a59110000-7f5a59150000 rw-p 00000000 00:00 0                          [stack:6480]
+7f5a59150000-7f5a59170000 rw-s 04427000 00:05 12127                      /dev/ati/card0
+7f5a59170000-7f5a59190000 rw-s 04426000 00:05 12127                      /dev/ati/card0
+7f5a59190000-7f5a59192000 rw-s 04425000 00:05 12127                      /dev/ati/card0
+7f5a59192000-7f5a59194000 rw-s 04424000 00:05 12127                      /dev/ati/card0
+7f5a59194000-7f5a5919a000 rw-s 04423000 00:05 12127                      /dev/ati/card0
+7f5a5919a000-7f5a591a0000 rw-s 04422000 00:05 12127                      /dev/ati/card0
+7f5a591a0000-7f5a591a1000 ---p 00000000 00:00 0 
+7f5a591a1000-7f5a591e1000 rw-p 00000000 00:00 0                          [stack:6479]
+7f5a591e1000-7f5a59201000 rw-s 0441e000 00:05 12127                      /dev/ati/card0
+7f5a59201000-7f5a59221000 rw-s 0441d000 00:05 12127                      /dev/ati/card0
+7f5a59221000-7f5a59223000 rw-s 0441c000 00:05 12127                      /dev/ati/card0
+7f5a59223000-7f5a59225000 rw-s 0441b000 00:05 12127                      /dev/ati/card0
+7f5a59225000-7f5a5922b000 rw-s 0441a000 00:05 12127                      /dev/ati/card0
+7f5a5922b000-7f5a59231000 rw-s 04419000 00:05 12127                      /dev/ati/card0
+7f5a59231000-7f5a59232000 ---p 00000000 00:00 0 
+7f5a59232000-7f5a59272000 rw-p 00000000 00:00 0                          [stack:6478]
+7f5a59272000-7f5a59292000 rw-s 04415000 00:05 12127                      /dev/ati/card0
+7f5a59292000-7f5a592b2000 rw-s 04414000 00:05 12127                      /dev/ati/card0
+7f5a592b2000-7f5a592b4000 rw-s 04413000 00:05 12127                      /dev/ati/card0
+7f5a592b4000-7f5a592b6000 rw-s 04412000 00:05 12127                      /dev/ati/card0
+7f5a592b6000-7f5a592bc000 rw-s 04411000 00:05 12127                      /dev/ati/card0
+7f5a592bc000-7f5a592c2000 rw-s 04410000 00:05 12127                      /dev/ati/card0
+7f5a592c2000-7f5a592c3000 ---p 00000000 00:00 0 
+7f5a592c3000-7f5a59303000 rw-p 00000000 00:00 0                          [stack:6477]
+7f5a59303000-7f5a59323000 rw-s 0440c000 00:05 12127                      /dev/ati/card0
+7f5a59323000-7f5a59343000 rw-s 0440b000 00:05 12127                      /dev/ati/card0
+7f5a59343000-7f5a59345000 rw-s 0440a000 00:05 12127                      /dev/ati/card0
+7f5a59345000-7f5a59347000 rw-s 04409000 00:05 12127                      /dev/ati/card0
+7f5a59347000-7f5a5934d000 rw-s 04408000 00:05 12127                      /dev/ati/card0
+7f5a5934d000-7f5a59353000 rw-s 04407000 00:05 12127                      /dev/ati/card0
+7f5a59353000-7f5a59354000 ---p 00000000 00:00 0 
+7f5a59354000-7f5a59394000 rw-p 00000000 00:00 0                          [stack:6476]
+7f5a59394000-7f5a593b4000 rw-s 04403000 00:05 12127                      /dev/ati/card0
+7f5a593b4000-7f5a593d4000 rw-s 04402000 00:05 12127                      /dev/ati/card0
+7f5a593d4000-7f5a593d6000 rw-s 04401000 00:05 12127                      /dev/ati/card0
+7f5a593d6000-7f5a593d8000 rw-s 04400000 00:05 12127                      /dev/ati/card0
+7f5a593d8000-7f5a593de000 rw-s 043ff000 00:05 12127                      /dev/ati/card0
+7f5a593de000-7f5a593e4000 rw-s 043fe000 00:05 12127                      /dev/ati/card0
+7f5a593e4000-7f5a593e5000 ---p 00000000 00:00 0 
+7f5a593e5000-7f5a59425000 rw-p 00000000 00:00 0                          [stack:6475]
+7f5a59425000-7f5a59445000 rw-s 043fa000 00:05 12127                      /dev/ati/card0
+7f5a59445000-7f5a59465000 rw-s 043f9000 00:05 12127                      /dev/ati/card0
+7f5a59465000-7f5a59467000 rw-s 043f8000 00:05 12127                      /dev/ati/card0
+7f5a59467000-7f5a59469000 rw-s 043f7000 00:05 12127                      /dev/ati/card0
+7f5a59469000-7f5a5946f000 rw-s 043f6000 00:05 12127                      /dev/ati/card0
+7f5a5946f000-7f5a59475000 rw-s 043f5000 00:05 12127                      /dev/ati/card0
+7f5a59475000-7f5a59476000 ---p 00000000 00:00 0 
+7f5a59476000-7f5a594b6000 rw-p 00000000 00:00 0                          [stack:6474]
+7f5a594b6000-7f5a594d6000 rw-s 043f1000 00:05 12127                      /dev/ati/card0
+7f5a594d6000-7f5a594f6000 rw-s 043f0000 00:05 12127                      /dev/ati/card0
+7f5a594f6000-7f5a594f8000 rw-s 043ef000 00:05 12127                      /dev/ati/card0
+7f5a594f8000-7f5a594fa000 rw-s 043ee000 00:05 12127                      /dev/ati/card0
+7f5a594fa000-7f5a59500000 rw-s 043ed000 00:05 12127                      /dev/ati/card0
+7f5a59500000-7f5a59506000 rw-s 043ec000 00:05 12127                      /dev/ati/card0
+7f5a59506000-7f5a59507000 ---p 00000000 00:00 0 
+7f5a59507000-7f5a59547000 rw-p 00000000 00:00 0                          [stack:6473]
+7f5a59547000-7f5a59567000 rw-s 043e8000 00:05 12127                      /dev/ati/card0
+7f5a59567000-7f5a59587000 rw-s 043e7000 00:05 12127                      /dev/ati/card0
+7f5a59587000-7f5a59589000 rw-s 043e6000 00:05 12127                      /dev/ati/card0
+7f5a59589000-7f5a5958b000 rw-s 043e5000 00:05 12127                      /dev/ati/card0
+7f5a5958b000-7f5a59591000 rw-s 043e4000 00:05 12127                      /dev/ati/card0
+7f5a59591000-7f5a59597000 rw-s 043e3000 00:05 12127                      /dev/ati/card0
+7f5a59597000-7f5a59598000 ---p 00000000 00:00 0 
+7f5a59598000-7f5a595d8000 rw-p 00000000 00:00 0                          [stack:6472]
+7f5a595d8000-7f5a595f8000 rw-s 043df000 00:05 12127                      /dev/ati/card0
+7f5a595f8000-7f5a59618000 rw-s 043de000 00:05 12127                      /dev/ati/card0
+7f5a59618000-7f5a5961a000 rw-s 043dd000 00:05 12127                      /dev/ati/card0
+7f5a5961a000-7f5a5961c000 rw-s 043dc000 00:05 12127                      /dev/ati/card0
+7f5a5961c000-7f5a59622000 rw-s 043db000 00:05 12127                      /dev/ati/card0
+7f5a59622000-7f5a59628000 rw-s 043da000 00:05 12127                      /dev/ati/card0
+7f5a59628000-7f5a59629000 ---p 00000000 00:00 0 
+7f5a59629000-7f5a59669000 rw-p 00000000 00:00 0                          [stack:6471]
+7f5a59669000-7f5a59689000 rw-s 043d6000 00:05 12127                      /dev/ati/card0
+7f5a59689000-7f5a596a9000 rw-s 043d5000 00:05 12127                      /dev/ati/card0
+7f5a596a9000-7f5a596ab000 rw-s 043d4000 00:05 12127                      /dev/ati/card0
+7f5a596ab000-7f5a596ad000 rw-s 043d3000 00:05 12127                      /dev/ati/card0
+7f5a596ad000-7f5a596b3000 rw-s 043d2000 00:05 12127                      /dev/ati/card0
+7f5a596b3000-7f5a596b9000 rw-s 043d1000 00:05 12127                      /dev/ati/card0
+7f5a596b9000-7f5a596ba000 ---p 00000000 00:00 0 
+7f5a596ba000-7f5a596fa000 rw-p 00000000 00:00 0                          [stack:6470]
+7f5a596fa000-7f5a5971a000 rw-s 043cd000 00:05 12127                      /dev/ati/card0
+7f5a5971a000-7f5a5973a000 rw-s 043cc000 00:05 12127                      /dev/ati/card0
+7f5a5973a000-7f5a5973c000 rw-s 043cb000 00:05 12127                      /dev/ati/card0
+7f5a5973c000-7f5a5973e000 rw-s 043ca000 00:05 12127                      /dev/ati/card0
+7f5a5973e000-7f5a59744000 rw-s 043c9000 00:05 12127                      /dev/ati/card0
+7f5a59744000-7f5a5974a000 rw-s 043c8000 00:05 12127                      /dev/ati/card0
+7f5a5974a000-7f5a5974b000 ---p 00000000 00:00 0 
+7f5a5974b000-7f5a5978b000 rw-p 00000000 00:00 0                          [stack:6469]
+7f5a5978b000-7f5a597ab000 rw-s 043c4000 00:05 12127                      /dev/ati/card0
+7f5a597ab000-7f5a597cb000 rw-s 043c3000 00:05 12127                      /dev/ati/card0
+7f5a597cb000-7f5a597cd000 rw-s 043c2000 00:05 12127                      /dev/ati/card0
+7f5a597cd000-7f5a597cf000 rw-s 043c1000 00:05 12127                      /dev/ati/card0
+7f5a597cf000-7f5a597d5000 rw-s 043c0000 00:05 12127                      /dev/ati/card0
+7f5a597d5000-7f5a597db000 rw-s 043bf000 00:05 12127                      /dev/ati/card0
+7f5a597db000-7f5a597dc000 ---p 00000000 00:00 0 
+7f5a597dc000-7f5a5981c000 rw-p 00000000 00:00 0                          [stack:6468]
+7f5a5981c000-7f5a5983c000 rw-s 043bb000 00:05 12127                      /dev/ati/card0
+7f5a5983c000-7f5a5985c000 rw-s 043ba000 00:05 12127                      /dev/ati/card0
+7f5a5985c000-7f5a5985e000 rw-s 043b9000 00:05 12127                      /dev/ati/card0
+7f5a5985e000-7f5a59860000 rw-s 043b8000 00:05 12127                      /dev/ati/card0
+7f5a59860000-7f5a59866000 rw-s 043b7000 00:05 12127                      /dev/ati/card0
+7f5a59866000-7f5a5986c000 rw-s 043b6000 00:05 12127                      /dev/ati/card0
+7f5a5986c000-7f5a5986d000 ---p 00000000 00:00 0 
+7f5a5986d000-7f5a598ad000 rw-p 00000000 00:00 0                          [stack:6467]
+7f5a598ad000-7f5a598cd000 rw-s 043b2000 00:05 12127                      /dev/ati/card0
+7f5a598cd000-7f5a598ed000 rw-s 043b1000 00:05 12127                      /dev/ati/card0
+7f5a598ed000-7f5a598ef000 rw-s 043b0000 00:05 12127                      /dev/ati/card0
+7f5a598ef000-7f5a598f1000 rw-s 043af000 00:05 12127                      /dev/ati/card0
+7f5a598f1000-7f5a598f7000 rw-s 043ae000 00:05 12127                      /dev/ati/card0
+7f5a598f7000-7f5a598fd000 rw-s 043ad000 00:05 12127                      /dev/ati/card0
+7f5a598fd000-7f5a598fe000 ---p 00000000 00:00 0 
+7f5a598fe000-7f5a5993e000 rw-p 00000000 00:00 0                          [stack:6466]
+7f5a5993e000-7f5a5995e000 rw-s 043a9000 00:05 12127                      /dev/ati/card0
+7f5a5995e000-7f5a5997e000 rw-s 043a8000 00:05 12127                      /dev/ati/card0
+7f5a5997e000-7f5a59980000 rw-s 043a7000 00:05 12127                      /dev/ati/card0
+7f5a59980000-7f5a59982000 rw-s 043a6000 00:05 12127                      /dev/ati/card0
+7f5a59982000-7f5a59988000 rw-s 043a5000 00:05 12127                      /dev/ati/card0
+7f5a59988000-7f5a5998e000 rw-s 043a4000 00:05 12127                      /dev/ati/card0
+7f5a5998e000-7f5a5998f000 ---p 00000000 00:00 0 
+7f5a5998f000-7f5a599cf000 rw-p 00000000 00:00 0                          [stack:6465]
+7f5a599cf000-7f5a599ef000 rw-s 043a0000 00:05 12127                      /dev/ati/card0
+7f5a599ef000-7f5a59a0f000 rw-s 0439f000 00:05 12127                      /dev/ati/card0
+7f5a59a0f000-7f5a59a11000 rw-s 0439e000 00:05 12127                      /dev/ati/card0
+7f5a59a11000-7f5a59a13000 rw-s 0439d000 00:05 12127                      /dev/ati/card0
+7f5a59a13000-7f5a59a19000 rw-s 0439c000 00:05 12127                      /dev/ati/card0
+7f5a59a19000-7f5a59a1f000 rw-s 0439b000 00:05 12127                      /dev/ati/card0
+7f5a59a1f000-7f5a59a20000 ---p 00000000 00:00 0 
+7f5a59a20000-7f5a59a60000 rw-p 00000000 00:00 0                          [stack:6464]
+7f5a59a60000-7f5a59a80000 rw-s 04397000 00:05 12127                      /dev/ati/card0
+7f5a59a80000-7f5a59aa0000 rw-s 04396000 00:05 12127                      /dev/ati/card0
+7f5a59aa0000-7f5a59aa2000 rw-s 04395000 00:05 12127                      /dev/ati/card0
+7f5a59aa2000-7f5a59aa4000 rw-s 04394000 00:05 12127                      /dev/ati/card0
+7f5a59aa4000-7f5a59aaa000 rw-s 04393000 00:05 12127                      /dev/ati/card0
+7f5a59aaa000-7f5a59ab0000 rw-s 04392000 00:05 12127                      /dev/ati/card0
+7f5a59ab0000-7f5a59ab1000 ---p 00000000 00:00 0 
+7f5a59ab1000-7f5a59af1000 rw-p 00000000 00:00 0                          [stack:6463]
+7f5a59af1000-7f5a59b11000 rw-s 0438e000 00:05 12127                      /dev/ati/card0
+7f5a59b11000-7f5a59b31000 rw-s 0438d000 00:05 12127                      /dev/ati/card0
+7f5a59b31000-7f5a59b33000 rw-s 0438c000 00:05 12127                      /dev/ati/card0
+7f5a59b33000-7f5a59b35000 rw-s 0438b000 00:05 12127                      /dev/ati/card0
+7f5a59b35000-7f5a59b3b000 rw-s 0438a000 00:05 12127                      /dev/ati/card0
+7f5a59b3b000-7f5a59b41000 rw-s 04389000 00:05 12127                      /dev/ati/card0
+7f5a59b41000-7f5a59b42000 ---p 00000000 00:00 0 
+7f5a59b42000-7f5a59b82000 rw-p 00000000 00:00 0                          [stack:6462]
+7f5a59b82000-7f5a59ba2000 rw-s 04385000 00:05 12127                      /dev/ati/card0
+7f5a59ba2000-7f5a59bc2000 rw-s 04384000 00:05 12127                      /dev/ati/card0
+7f5a59bc2000-7f5a59bc4000 rw-s 04383000 00:05 12127                      /dev/ati/card0
+7f5a59bc4000-7f5a59bc6000 rw-s 04382000 00:05 12127                      /dev/ati/card0
+7f5a59bc6000-7f5a59bcc000 rw-s 04381000 00:05 12127                      /dev/ati/card0
+7f5a59bcc000-7f5a59bd2000 rw-s 04380000 00:05 12127                      /dev/ati/card0
+7f5a59bd2000-7f5a59bd3000 ---p 00000000 00:00 0 
+7f5a59bd3000-7f5a59c13000 rw-p 00000000 00:00 0                          [stack:6461]
+7f5a59c13000-7f5a59c33000 rw-s 0437c000 00:05 12127                      /dev/ati/card0
+7f5a59c33000-7f5a59c53000 rw-s 0437b000 00:05 12127                      /dev/ati/card0
+7f5a59c53000-7f5a59c55000 rw-s 0437a000 00:05 12127                      /dev/ati/card0
+7f5a59c55000-7f5a59c57000 rw-s 04379000 00:05 12127                      /dev/ati/card0
+7f5a59c57000-7f5a59c5d000 rw-s 04378000 00:05 12127                      /dev/ati/card0
+7f5a59c5d000-7f5a59c63000 rw-s 04377000 00:05 12127                      /dev/ati/card0
+7f5a59c63000-7f5a59c64000 ---p 00000000 00:00 0 
+7f5a59c64000-7f5a59ca4000 rw-p 00000000 00:00 0                          [stack:6460]
+7f5a59ca4000-7f5a59cc4000 rw-s 04373000 00:05 12127                      /dev/ati/card0
+7f5a59cc4000-7f5a59ce4000 rw-s 04372000 00:05 12127                      /dev/ati/card0
+7f5a59ce4000-7f5a59ce6000 rw-s 04371000 00:05 12127                      /dev/ati/card0
+7f5a59ce6000-7f5a59ce8000 rw-s 04370000 00:05 12127                      /dev/ati/card0
+7f5a59ce8000-7f5a59cee000 rw-s 0436f000 00:05 12127                      /dev/ati/card0
+7f5a59cee000-7f5a59cf4000 rw-s 0436e000 00:05 12127                      /dev/ati/card0
+7f5a59cf4000-7f5a59cf5000 ---p 00000000 00:00 0 
+7f5a59cf5000-7f5a59d35000 rw-p 00000000 00:00 0                          [stack:6459]
+7f5a59d35000-7f5a59d55000 rw-s 0436a000 00:05 12127                      /dev/ati/card0
+7f5a59d55000-7f5a59d75000 rw-s 04369000 00:05 12127                      /dev/ati/card0
+7f5a59d75000-7f5a59d77000 rw-s 04368000 00:05 12127                      /dev/ati/card0
+7f5a59d77000-7f5a59d79000 rw-s 04367000 00:05 12127                      /dev/ati/card0
+7f5a59d79000-7f5a59d7f000 rw-s 04366000 00:05 12127                      /dev/ati/card0
+7f5a59d7f000-7f5a59d85000 rw-s 04365000 00:05 12127                      /dev/ati/card0
+7f5a59d85000-7f5a59d86000 ---p 00000000 00:00 0 
+7f5a59d86000-7f5a59dc6000 rw-p 00000000 00:00 0                          [stack:6458]
+7f5a59dc6000-7f5a59de6000 rw-s 04361000 00:05 12127                      /dev/ati/card0
+7f5a59de6000-7f5a59e06000 rw-s 04360000 00:05 12127                      /dev/ati/card0
+7f5a59e06000-7f5a59e08000 rw-s 0435f000 00:05 12127                      /dev/ati/card0
+7f5a59e08000-7f5a59e0a000 rw-s 0435e000 00:05 12127                      /dev/ati/card0
+7f5a59e0a000-7f5a59e10000 rw-s 0435d000 00:05 12127                      /dev/ati/card0
+7f5a59e10000-7f5a59e16000 rw-s 0435c000 00:05 12127                      /dev/ati/card0
+7f5a59e16000-7f5a59e17000 ---p 00000000 00:00 0 
+7f5a59e17000-7f5a59e57000 rw-p 00000000 00:00 0                          [stack:6457]
+7f5a59e57000-7f5a59e77000 rw-s 04358000 00:05 12127                      /dev/ati/card0
+7f5a59e77000-7f5a59e97000 rw-s 04357000 00:05 12127                      /dev/ati/card0
+7f5a59e97000-7f5a59e99000 rw-s 04356000 00:05 12127                      /dev/ati/card0
+7f5a59e99000-7f5a59e9b000 rw-s 04355000 00:05 12127                      /dev/ati/card0
+7f5a59e9b000-7f5a59ea1000 rw-s 04354000 00:05 12127                      /dev/ati/card0
+7f5a59ea1000-7f5a59ea7000 rw-s 04353000 00:05 12127                      /dev/ati/card0
+7f5a59ea7000-7f5a59ea8000 ---p 00000000 00:00 0 
+7f5a59ea8000-7f5a59ee8000 rw-p 00000000 00:00 0                          [stack:6456]
+7f5a59ee8000-7f5a59f08000 rw-s 0434f000 00:05 12127                      /dev/ati/card0
+7f5a59f08000-7f5a59f28000 rw-s 0434e000 00:05 12127                      /dev/ati/card0
+7f5a59f28000-7f5a59f2a000 rw-s 0434d000 00:05 12127                      /dev/ati/card0
+7f5a59f2a000-7f5a59f2c000 rw-s 0434c000 00:05 12127                      /dev/ati/card0
+7f5a59f2c000-7f5a59f32000 rw-s 0434b000 00:05 12127                      /dev/ati/card0
+7f5a59f32000-7f5a59f38000 rw-s 0434a000 00:05 12127                      /dev/ati/card0
+7f5a59f38000-7f5a59f39000 ---p 00000000 00:00 0 
+7f5a59f39000-7f5a59f79000 rw-p 00000000 00:00 0                          [stack:6455]
+7f5a59f79000-7f5a59f99000 rw-s 04346000 00:05 12127                      /dev/ati/card0
+7f5a59f99000-7f5a59fb9000 rw-s 04345000 00:05 12127                      /dev/ati/card0
+7f5a59fb9000-7f5a59fbb000 rw-s 04344000 00:05 12127                      /dev/ati/card0
+7f5a59fbb000-7f5a59fbd000 rw-s 04343000 00:05 12127                      /dev/ati/card0
+7f5a59fbd000-7f5a59fc3000 rw-s 04342000 00:05 12127                      /dev/ati/card0
+7f5a59fc3000-7f5a59fc9000 rw-s 04341000 00:05 12127                      /dev/ati/card0
+7f5a59fc9000-7f5a59fca000 ---p 00000000 00:00 0 
+7f5a59fca000-7f5a5a00a000 rw-p 00000000 00:00 0                          [stack:6454]
+7f5a5a00a000-7f5a5a02a000 rw-s 0433d000 00:05 12127                      /dev/ati/card0
+7f5a5a02a000-7f5a5a04a000 rw-s 0433c000 00:05 12127                      /dev/ati/card0
+7f5a5a04a000-7f5a5a04c000 rw-s 0433b000 00:05 12127                      /dev/ati/card0
+7f5a5a04c000-7f5a5a04e000 rw-s 0433a000 00:05 12127                      /dev/ati/card0
+7f5a5a04e000-7f5a5a054000 rw-s 04339000 00:05 12127                      /dev/ati/card0
+7f5a5a054000-7f5a5a05a000 rw-s 04338000 00:05 12127                      /dev/ati/card0
+7f5a5a05a000-7f5a5a05b000 ---p 00000000 00:00 0 
+7f5a5a05b000-7f5a5a09b000 rw-p 00000000 00:00 0                          [stack:6453]
+7f5a5a09b000-7f5a5a0bb000 rw-s 04334000 00:05 12127                      /dev/ati/card0
+7f5a5a0bb000-7f5a5a0db000 rw-s 04333000 00:05 12127                      /dev/ati/card0
+7f5a5a0db000-7f5a5a0dd000 rw-s 04332000 00:05 12127                      /dev/ati/card0
+7f5a5a0dd000-7f5a5a0df000 rw-s 04331000 00:05 12127                      /dev/ati/card0
+7f5a5a0df000-7f5a5a0e5000 rw-s 04330000 00:05 12127                      /dev/ati/card0
+7f5a5a0e5000-7f5a5a0eb000 rw-s 0432f000 00:05 12127                      /dev/ati/card0
+7f5a5a0eb000-7f5a5a0ec000 ---p 00000000 00:00 0 
+7f5a5a0ec000-7f5a5a12c000 rw-p 00000000 00:00 0                          [stack:6452]
+7f5a5a12c000-7f5a5a14c000 rw-s 0432b000 00:05 12127                      /dev/ati/card0
+7f5a5a14c000-7f5a5a16c000 rw-s 0432a000 00:05 12127                      /dev/ati/card0
+7f5a5a16c000-7f5a5a16e000 rw-s 04329000 00:05 12127                      /dev/ati/card0
+7f5a5a16e000-7f5a5a170000 rw-s 04328000 00:05 12127                      /dev/ati/card0
+7f5a5a170000-7f5a5a176000 rw-s 04327000 00:05 12127                      /dev/ati/card0
+7f5a5a176000-7f5a5a17c000 rw-s 04326000 00:05 12127                      /dev/ati/card0
+7f5a5a17c000-7f5a5a17d000 ---p 00000000 00:00 0 
+7f5a5a17d000-7f5a5a1bd000 rw-p 00000000 00:00 0                          [stack:6451]
+7f5a5a1bd000-7f5a5a1dd000 rw-s 04322000 00:05 12127                      /dev/ati/card0
+7f5a5a1dd000-7f5a5a1fd000 rw-s 04321000 00:05 12127                      /dev/ati/card0
+7f5a5a1fd000-7f5a5a1ff000 rw-s 04320000 00:05 12127                      /dev/ati/card0
+7f5a5a1ff000-7f5a5a201000 rw-s 0431f000 00:05 12127                      /dev/ati/card0
+7f5a5a201000-7f5a5a207000 rw-s 0431e000 00:05 12127                      /dev/ati/card0
+7f5a5a207000-7f5a5a20d000 rw-s 0431d000 00:05 12127                      /dev/ati/card0
+7f5a5a20d000-7f5a5a20e000 ---p 00000000 00:00 0 
+7f5a5a20e000-7f5a5a24e000 rw-p 00000000 00:00 0                          [stack:6450]
+7f5a5a24e000-7f5a5a26e000 rw-s 04319000 00:05 12127                      /dev/ati/card0
+7f5a5a26e000-7f5a5a28e000 rw-s 04318000 00:05 12127                      /dev/ati/card0
+7f5a5a28e000-7f5a5a290000 rw-s 04317000 00:05 12127                      /dev/ati/card0
+7f5a5a290000-7f5a5a292000 rw-s 04316000 00:05 12127                      /dev/ati/card0
+7f5a5a292000-7f5a5a298000 rw-s 04315000 00:05 12127                      /dev/ati/card0
+7f5a5a298000-7f5a5a29e000 rw-s 04314000 00:05 12127                      /dev/ati/card0
+7f5a5a29e000-7f5a5a29f000 ---p 00000000 00:00 0 
+7f5a5a29f000-7f5a5a2df000 rw-p 00000000 00:00 0                          [stack:6449]
+7f5a5a2df000-7f5a5a2ff000 rw-s 04310000 00:05 12127                      /dev/ati/card0
+7f5a5a2ff000-7f5a5a31f000 rw-s 0430f000 00:05 12127                      /dev/ati/card0
+7f5a5a31f000-7f5a5a321000 rw-s 0430e000 00:05 12127                      /dev/ati/card0
+7f5a5a321000-7f5a5a323000 rw-s 0430d000 00:05 12127                      /dev/ati/card0
+7f5a5a323000-7f5a5a329000 rw-s 0430c000 00:05 12127                      /dev/ati/card0
+7f5a5a329000-7f5a5a32f000 rw-s 0430b000 00:05 12127                      /dev/ati/card0
+7f5a5a32f000-7f5a5a330000 ---p 00000000 00:00 0 
+7f5a5a330000-7f5a5a370000 rw-p 00000000 00:00 0                          [stack:6448]
+7f5a5a370000-7f5a5a390000 rw-s 04307000 00:05 12127                      /dev/ati/card0
+7f5a5a390000-7f5a5a3b0000 rw-s 04306000 00:05 12127                      /dev/ati/card0
+7f5a5a3b0000-7f5a5a3b2000 rw-s 04305000 00:05 12127                      /dev/ati/card0
+7f5a5a3b2000-7f5a5a3b4000 rw-s 04304000 00:05 12127                      /dev/ati/card0
+7f5a5a3b4000-7f5a5a3ba000 rw-s 04303000 00:05 12127                      /dev/ati/card0
+7f5a5a3ba000-7f5a5a3c0000 rw-s 04302000 00:05 12127                      /dev/ati/card0
+7f5a5a3c0000-7f5a5a3c1000 ---p 00000000 00:00 0 
+7f5a5a3c1000-7f5a5a401000 rw-p 00000000 00:00 0                          [stack:6447]
+7f5a5a401000-7f5a5a421000 rw-s 042fe000 00:05 12127                      /dev/ati/card0
+7f5a5a421000-7f5a5a441000 rw-s 042fd000 00:05 12127                      /dev/ati/card0
+7f5a5a441000-7f5a5a443000 rw-s 042fc000 00:05 12127                      /dev/ati/card0
+7f5a5a443000-7f5a5a445000 rw-s 042fb000 00:05 12127                      /dev/ati/card0
+7f5a5a445000-7f5a5a44b000 rw-s 042fa000 00:05 12127                      /dev/ati/card0
+7f5a5a44b000-7f5a5a451000 rw-s 042f9000 00:05 12127                      /dev/ati/card0
+7f5a5a451000-7f5a5a452000 ---p 00000000 00:00 0 
+7f5a5a452000-7f5a5a492000 rw-p 00000000 00:00 0                          [stack:6446]
+7f5a5a492000-7f5a5a4b2000 rw-s 042f5000 00:05 12127                      /dev/ati/card0
+7f5a5a4b2000-7f5a5a4d2000 rw-s 042f4000 00:05 12127                      /dev/ati/card0
+7f5a5a4d2000-7f5a5a4d4000 rw-s 042f3000 00:05 12127                      /dev/ati/card0
+7f5a5a4d4000-7f5a5a4d6000 rw-s 042f2000 00:05 12127                      /dev/ati/card0
+7f5a5a4d6000-7f5a5a4dc000 rw-s 042f1000 00:05 12127                      /dev/ati/card0
+7f5a5a4dc000-7f5a5a4e2000 rw-s 042f0000 00:05 12127                      /dev/ati/card0
+7f5a5a4e2000-7f5a5a4e3000 ---p 00000000 00:00 0 
+7f5a5a4e3000-7f5a5a523000 rw-p 00000000 00:00 0                          [stack:6445]
+7f5a5a523000-7f5a5a543000 rw-s 042ec000 00:05 12127                      /dev/ati/card0
+7f5a5a543000-7f5a5a563000 rw-s 042eb000 00:05 12127                      /dev/ati/card0
+7f5a5a563000-7f5a5a565000 rw-s 042ea000 00:05 12127                      /dev/ati/card0
+7f5a5a565000-7f5a5a567000 rw-s 042e9000 00:05 12127                      /dev/ati/card0
+7f5a5a567000-7f5a5a56d000 rw-s 042e8000 00:05 12127                      /dev/ati/card0
+7f5a5a56d000-7f5a5a573000 rw-s 042e7000 00:05 12127                      /dev/ati/card0
+7f5a5a573000-7f5a5a574000 ---p 00000000 00:00 0 
+7f5a5a574000-7f5a5a5b4000 rw-p 00000000 00:00 0                          [stack:6444]
+7f5a5a5b4000-7f5a5a5d4000 rw-s 042e3000 00:05 12127                      /dev/ati/card0
+7f5a5a5d4000-7f5a5a5f4000 rw-s 042e2000 00:05 12127                      /dev/ati/card0
+7f5a5a5f4000-7f5a5a5f6000 rw-s 042e1000 00:05 12127                      /dev/ati/card0
+7f5a5a5f6000-7f5a5a5f8000 rw-s 042e0000 00:05 12127                      /dev/ati/card0
+7f5a5a5f8000-7f5a5a5fe000 rw-s 042df000 00:05 12127                      /dev/ati/card0
+7f5a5a5fe000-7f5a5a604000 rw-s 042de000 00:05 12127                      /dev/ati/card0
+7f5a5a604000-7f5a5a605000 ---p 00000000 00:00 0 
+7f5a5a605000-7f5a5a645000 rw-p 00000000 00:00 0                          [stack:6443]
+7f5a5a645000-7f5a5a665000 rw-s 042da000 00:05 12127                      /dev/ati/card0
+7f5a5a665000-7f5a5a685000 rw-s 042d9000 00:05 12127                      /dev/ati/card0
+7f5a5a685000-7f5a5a687000 rw-s 042d8000 00:05 12127                      /dev/ati/card0
+7f5a5a687000-7f5a5a689000 rw-s 042d7000 00:05 12127                      /dev/ati/card0
+7f5a5a689000-7f5a5a68f000 rw-s 042d6000 00:05 12127                      /dev/ati/card0
+7f5a5a68f000-7f5a5a695000 rw-s 042d5000 00:05 12127                      /dev/ati/card0
+7f5a5a695000-7f5a5a696000 ---p 00000000 00:00 0 
+7f5a5a696000-7f5a5a6d6000 rw-p 00000000 00:00 0                          [stack:6442]
+7f5a5a6d6000-7f5a5a6f6000 rw-s 042d1000 00:05 12127                      /dev/ati/card0
+7f5a5a6f6000-7f5a5a716000 rw-s 042d0000 00:05 12127                      /dev/ati/card0
+7f5a5a716000-7f5a5a718000 rw-s 042cf000 00:05 12127                      /dev/ati/card0
+7f5a5a718000-7f5a5a71a000 rw-s 042ce000 00:05 12127                      /dev/ati/card0
+7f5a5a71a000-7f5a5a720000 rw-s 042cd000 00:05 12127                      /dev/ati/card0
+7f5a5a720000-7f5a5a726000 rw-s 042cc000 00:05 12127                      /dev/ati/card0
+7f5a5a726000-7f5a5a727000 ---p 00000000 00:00 0 
+7f5a5a727000-7f5a5a767000 rw-p 00000000 00:00 0                          [stack:6441]
+7f5a5a767000-7f5a5a787000 rw-s 042c8000 00:05 12127                      /dev/ati/card0
+7f5a5a787000-7f5a5a7a7000 rw-s 042c7000 00:05 12127                      /dev/ati/card0
+7f5a5a7a7000-7f5a5a7a9000 rw-s 042c6000 00:05 12127                      /dev/ati/card0
+7f5a5a7a9000-7f5a5a7ab000 rw-s 042c5000 00:05 12127                      /dev/ati/card0
+7f5a5a7ab000-7f5a5a7b1000 rw-s 042c4000 00:05 12127                      /dev/ati/card0
+7f5a5a7b1000-7f5a5a7b7000 rw-s 042c3000 00:05 12127                      /dev/ati/card0
+7f5a5a7b7000-7f5a5a7b8000 ---p 00000000 00:00 0 
+7f5a5a7b8000-7f5a5a7f8000 rw-p 00000000 00:00 0                          [stack:6440]
+7f5a5a7f8000-7f5a5a818000 rw-s 042bf000 00:05 12127                      /dev/ati/card0
+7f5a5a818000-7f5a5a838000 rw-s 042be000 00:05 12127                      /dev/ati/card0
+7f5a5a838000-7f5a5a83a000 rw-s 042bd000 00:05 12127                      /dev/ati/card0
+7f5a5a83a000-7f5a5a83c000 rw-s 042bc000 00:05 12127                      /dev/ati/card0
+7f5a5a83c000-7f5a5a842000 rw-s 042bb000 00:05 12127                      /dev/ati/card0
+7f5a5a842000-7f5a5a848000 rw-s 042ba000 00:05 12127                      /dev/ati/card0
+7f5a5a848000-7f5a5a849000 ---p 00000000 00:00 0 
+7f5a5a849000-7f5a5a889000 rw-p 00000000 00:00 0                          [stack:6439]
+7f5a5a889000-7f5a5a8a9000 rw-s 042b6000 00:05 12127                      /dev/ati/card0
+7f5a5a8a9000-7f5a5a8c9000 rw-s 042b5000 00:05 12127                      /dev/ati/card0
+7f5a5a8c9000-7f5a5a8cb000 rw-s 042b4000 00:05 12127                      /dev/ati/card0
+7f5a5a8cb000-7f5a5a8cd000 rw-s 042b3000 00:05 12127                      /dev/ati/card0
+7f5a5a8cd000-7f5a5a8d3000 rw-s 042b2000 00:05 12127                      /dev/ati/card0
+7f5a5a8d3000-7f5a5a8d9000 rw-s 042b1000 00:05 12127                      /dev/ati/card0
+7f5a5a8d9000-7f5a5a8da000 ---p 00000000 00:00 0 
+7f5a5a8da000-7f5a5a91a000 rw-p 00000000 00:00 0                          [stack:6438]
+7f5a5a91a000-7f5a5a93a000 rw-s 042ad000 00:05 12127                      /dev/ati/card0
+7f5a5a93a000-7f5a5a95a000 rw-s 042ac000 00:05 12127                      /dev/ati/card0
+7f5a5a95a000-7f5a5a95c000 rw-s 042ab000 00:05 12127                      /dev/ati/card0
+7f5a5a95c000-7f5a5a95e000 rw-s 042aa000 00:05 12127                      /dev/ati/card0
+7f5a5a95e000-7f5a5a964000 rw-s 042a9000 00:05 12127                      /dev/ati/card0
+7f5a5a964000-7f5a5a96a000 rw-s 042a8000 00:05 12127                      /dev/ati/card0
+7f5a5a96a000-7f5a5a96b000 ---p 00000000 00:00 0 
+7f5a5a96b000-7f5a5a9ab000 rw-p 00000000 00:00 0                          [stack:6437]
+7f5a5a9ab000-7f5a5a9cb000 rw-s 042a4000 00:05 12127                      /dev/ati/card0
+7f5a5a9cb000-7f5a5a9eb000 rw-s 042a3000 00:05 12127                      /dev/ati/card0
+7f5a5a9eb000-7f5a5a9ed000 rw-s 042a2000 00:05 12127                      /dev/ati/card0
+7f5a5a9ed000-7f5a5a9ef000 rw-s 042a1000 00:05 12127                      /dev/ati/card0
+7f5a5a9ef000-7f5a5a9f5000 rw-s 042a0000 00:05 12127                      /dev/ati/card0
+7f5a5a9f5000-7f5a5a9fb000 rw-s 0429f000 00:05 12127                      /dev/ati/card0
+7f5a5a9fb000-7f5a5a9fc000 ---p 00000000 00:00 0 
+7f5a5a9fc000-7f5a5aa3c000 rw-p 00000000 00:00 0                          [stack:6436]
+7f5a5aa3c000-7f5a5aa5c000 rw-s 0429b000 00:05 12127                      /dev/ati/card0
+7f5a5aa5c000-7f5a5aa7c000 rw-s 0429a000 00:05 12127                      /dev/ati/card0
+7f5a5aa7c000-7f5a5aa7e000 rw-s 04299000 00:05 12127                      /dev/ati/card0
+7f5a5aa7e000-7f5a5aa80000 rw-s 04298000 00:05 12127                      /dev/ati/card0
+7f5a5aa80000-7f5a5aa86000 rw-s 04297000 00:05 12127                      /dev/ati/card0
+7f5a5aa86000-7f5a5aa8c000 rw-s 04296000 00:05 12127                      /dev/ati/card0
+7f5a5aa8c000-7f5a5aa8d000 ---p 00000000 00:00 0 
+7f5a5aa8d000-7f5a5aacd000 rw-p 00000000 00:00 0                          [stack:6435]
+7f5a5aacd000-7f5a5aaed000 rw-s 04292000 00:05 12127                      /dev/ati/card0
+7f5a5aaed000-7f5a5ab0d000 rw-s 04291000 00:05 12127                      /dev/ati/card0
+7f5a5ab0d000-7f5a5ab0f000 rw-s 04290000 00:05 12127                      /dev/ati/card0
+7f5a5ab0f000-7f5a5ab11000 rw-s 0428f000 00:05 12127                      /dev/ati/card0
+7f5a5ab11000-7f5a5ab17000 rw-s 0428e000 00:05 12127                      /dev/ati/card0
+7f5a5ab17000-7f5a5ab1d000 rw-s 0428d000 00:05 12127                      /dev/ati/card0
+7f5a5ab1d000-7f5a5ab1e000 ---p 00000000 00:00 0 
+7f5a5ab1e000-7f5a5ab5e000 rw-p 00000000 00:00 0                          [stack:6434]
+7f5a5ab5e000-7f5a5ab7e000 rw-s 04289000 00:05 12127                      /dev/ati/card0
+7f5a5ab7e000-7f5a5ab9e000 rw-s 04288000 00:05 12127                      /dev/ati/card0
+7f5a5ab9e000-7f5a5aba0000 rw-s 04287000 00:05 12127                      /dev/ati/card0
+7f5a5aba0000-7f5a5aba2000 rw-s 04286000 00:05 12127                      /dev/ati/card0
+7f5a5aba2000-7f5a5aba8000 rw-s 04285000 00:05 12127                      /dev/ati/card0
+7f5a5aba8000-7f5a5abae000 rw-s 04284000 00:05 12127                      /dev/ati/card0
+7f5a5abae000-7f5a5abaf000 ---p 00000000 00:00 0 
+7f5a5abaf000-7f5a5abef000 rw-p 00000000 00:00 0                          [stack:6433]
+7f5a5abef000-7f5a5ac0f000 rw-s 04280000 00:05 12127                      /dev/ati/card0
+7f5a5ac0f000-7f5a5ac2f000 rw-s 0427f000 00:05 12127                      /dev/ati/card0
+7f5a5ac2f000-7f5a5ac31000 rw-s 0427e000 00:05 12127                      /dev/ati/card0
+7f5a5ac31000-7f5a5ac33000 rw-s 0427d000 00:05 12127                      /dev/ati/card0
+7f5a5ac33000-7f5a5ac39000 rw-s 0427c000 00:05 12127                      /dev/ati/card0
+7f5a5ac39000-7f5a5ac3f000 rw-s 0427b000 00:05 12127                      /dev/ati/card0
+7f5a5ac3f000-7f5a5ac40000 ---p 00000000 00:00 0 
+7f5a5ac40000-7f5a5ac80000 rw-p 00000000 00:00 0                          [stack:6432]
+7f5a5ac80000-7f5a5aca0000 rw-s 04277000 00:05 12127                      /dev/ati/card0
+7f5a5aca0000-7f5a5acc0000 rw-s 04276000 00:05 12127                      /dev/ati/card0
+7f5a5acc0000-7f5a5acc2000 rw-s 04275000 00:05 12127                      /dev/ati/card0
+7f5a5acc2000-7f5a5acc4000 rw-s 04274000 00:05 12127                      /dev/ati/card0
+7f5a5acc4000-7f5a5acca000 rw-s 04273000 00:05 12127                      /dev/ati/card0
+7f5a5acca000-7f5a5acd0000 rw-s 04272000 00:05 12127                      /dev/ati/card0
+7f5a5acd0000-7f5a5acd1000 ---p 00000000 00:00 0 
+7f5a5acd1000-7f5a5ad11000 rw-p 00000000 00:00 0                          [stack:6431]
+7f5a5ad11000-7f5a5ad31000 rw-s 0426e000 00:05 12127                      /dev/ati/card0
+7f5a5ad31000-7f5a5ad51000 rw-s 0426d000 00:05 12127                      /dev/ati/card0
+7f5a5ad51000-7f5a5ad53000 rw-s 0426c000 00:05 12127                      /dev/ati/card0
+7f5a5ad53000-7f5a5ad55000 rw-s 0426b000 00:05 12127                      /dev/ati/card0
+7f5a5ad55000-7f5a5ad5b000 rw-s 0426a000 00:05 12127                      /dev/ati/card0
+7f5a5ad5b000-7f5a5ad61000 rw-s 04269000 00:05 12127                      /dev/ati/card0
+7f5a5ad61000-7f5a5ad62000 ---p 00000000 00:00 0 
+7f5a5ad62000-7f5a5ada2000 rw-p 00000000 00:00 0                          [stack:6430]
+7f5a5ada2000-7f5a5adc2000 rw-s 04265000 00:05 12127                      /dev/ati/card0
+7f5a5adc2000-7f5a5ade2000 rw-s 04264000 00:05 12127                      /dev/ati/card0
+7f5a5ade2000-7f5a5ade4000 rw-s 04263000 00:05 12127                      /dev/ati/card0
+7f5a5ade4000-7f5a5ade6000 rw-s 04262000 00:05 12127                      /dev/ati/card0
+7f5a5ade6000-7f5a5adec000 rw-s 04261000 00:05 12127                      /dev/ati/card0
+7f5a5adec000-7f5a5adf2000 rw-s 04260000 00:05 12127                      /dev/ati/card0
+7f5a5adf2000-7f5a5adf3000 ---p 00000000 00:00 0 
+7f5a5adf3000-7f5a5ae33000 rw-p 00000000 00:00 0                          [stack:6429]
+7f5a5ae33000-7f5a5ae53000 rw-s 0425c000 00:05 12127                      /dev/ati/card0
+7f5a5ae53000-7f5a5ae73000 rw-s 0425b000 00:05 12127                      /dev/ati/card0
+7f5a5ae73000-7f5a5ae75000 rw-s 0425a000 00:05 12127                      /dev/ati/card0
+7f5a5ae75000-7f5a5ae77000 rw-s 04259000 00:05 12127                      /dev/ati/card0
+7f5a5ae77000-7f5a5ae7d000 rw-s 04258000 00:05 12127                      /dev/ati/card0
+7f5a5ae7d000-7f5a5ae83000 rw-s 04257000 00:05 12127                      /dev/ati/card0
+7f5a5ae83000-7f5a5ae84000 ---p 00000000 00:00 0 
+7f5a5ae84000-7f5a5aec4000 rw-p 00000000 00:00 0                          [stack:6428]
+7f5a5aec4000-7f5a5aee4000 rw-s 04253000 00:05 12127                      /dev/ati/card0
+7f5a5aee4000-7f5a5af04000 rw-s 04252000 00:05 12127                      /dev/ati/card0
+7f5a5af04000-7f5a5af06000 rw-s 04251000 00:05 12127                      /dev/ati/card0
+7f5a5af06000-7f5a5af08000 rw-s 04250000 00:05 12127                      /dev/ati/card0
+7f5a5af08000-7f5a5af0e000 rw-s 0424f000 00:05 12127                      /dev/ati/card0
+7f5a5af0e000-7f5a5af14000 rw-s 0424e000 00:05 12127                      /dev/ati/card0
+7f5a5af14000-7f5a5af15000 ---p 00000000 00:00 0 
+7f5a5af15000-7f5a5af55000 rw-p 00000000 00:00 0                          [stack:6427]
+7f5a5af55000-7f5a5af75000 rw-s 0424a000 00:05 12127                      /dev/ati/card0
+7f5a5af75000-7f5a5af95000 rw-s 04249000 00:05 12127                      /dev/ati/card0
+7f5a5af95000-7f5a5af97000 rw-s 04248000 00:05 12127                      /dev/ati/card0
+7f5a5af97000-7f5a5af99000 rw-s 04247000 00:05 12127                      /dev/ati/card0
+7f5a5af99000-7f5a5af9f000 rw-s 04246000 00:05 12127                      /dev/ati/card0
+7f5a5af9f000-7f5a5afa5000 rw-s 04245000 00:05 12127                      /dev/ati/card0
+7f5a5afa5000-7f5a5afa6000 ---p 00000000 00:00 0 
+7f5a5afa6000-7f5a5afe6000 rw-p 00000000 00:00 0                          [stack:6426]
+7f5a5afe6000-7f5a5b006000 rw-s 04241000 00:05 12127                      /dev/ati/card0
+7f5a5b006000-7f5a5b026000 rw-s 04240000 00:05 12127                      /dev/ati/card0
+7f5a5b026000-7f5a5b028000 rw-s 0423f000 00:05 12127                      /dev/ati/card0
+7f5a5b028000-7f5a5b02a000 rw-s 0423e000 00:05 12127                      /dev/ati/card0
+7f5a5b02a000-7f5a5b030000 rw-s 0423d000 00:05 12127                      /dev/ati/card0
+7f5a5b030000-7f5a5b036000 rw-s 0423c000 00:05 12127                      /dev/ati/card0
+7f5a5b036000-7f5a5b037000 ---p 00000000 00:00 0 
+7f5a5b037000-7f5a5b077000 rw-p 00000000 00:00 0                          [stack:6425]
+7f5a5b077000-7f5a5b097000 rw-s 04238000 00:05 12127                      /dev/ati/card0
+7f5a5b097000-7f5a5b0b7000 rw-s 04237000 00:05 12127                      /dev/ati/card0
+7f5a5b0b7000-7f5a5b0b9000 rw-s 04236000 00:05 12127                      /dev/ati/card0
+7f5a5b0b9000-7f5a5b0bb000 rw-s 04235000 00:05 12127                      /dev/ati/card0
+7f5a5b0bb000-7f5a5b0c1000 rw-s 04234000 00:05 12127                      /dev/ati/card0
+7f5a5b0c1000-7f5a5b0c7000 rw-s 04233000 00:05 12127                      /dev/ati/card0
+7f5a5b0c7000-7f5a5b0c8000 ---p 00000000 00:00 0 
+7f5a5b0c8000-7f5a5b108000 rw-p 00000000 00:00 0                          [stack:6424]
+7f5a5b108000-7f5a5b128000 rw-s 0422f000 00:05 12127                      /dev/ati/card0
+7f5a5b128000-7f5a5b148000 rw-s 0422e000 00:05 12127                      /dev/ati/card0
+7f5a5b148000-7f5a5b14a000 rw-s 0422d000 00:05 12127                      /dev/ati/card0
+7f5a5b14a000-7f5a5b14c000 rw-s 0422c000 00:05 12127                      /dev/ati/card0
+7f5a5b14c000-7f5a5b152000 rw-s 0422b000 00:05 12127                      /dev/ati/card0
+7f5a5b152000-7f5a5b158000 rw-s 0422a000 00:05 12127                      /dev/ati/card0
+7f5a5b158000-7f5a5b159000 ---p 00000000 00:00 0 
+7f5a5b159000-7f5a5b199000 rw-p 00000000 00:00 0                          [stack:6423]
+7f5a5b199000-7f5a5b1b9000 rw-s 04226000 00:05 12127                      /dev/ati/card0
+7f5a5b1b9000-7f5a5b1d9000 rw-s 04225000 00:05 12127                      /dev/ati/card0
+7f5a5b1d9000-7f5a5b1db000 rw-s 04224000 00:05 12127                      /dev/ati/card0
+7f5a5b1db000-7f5a5b1dd000 rw-s 04223000 00:05 12127                      /dev/ati/card0
+7f5a5b1dd000-7f5a5b1e3000 rw-s 04222000 00:05 12127                      /dev/ati/card0
+7f5a5b1e3000-7f5a5b1e9000 rw-s 04221000 00:05 12127                      /dev/ati/card0
+7f5a5b1e9000-7f5a5b1ea000 ---p 00000000 00:00 0 
+7f5a5b1ea000-7f5a5b22a000 rw-p 00000000 00:00 0                          [stack:6422]
+7f5a5b22a000-7f5a5b24a000 rw-s 0421d000 00:05 12127                      /dev/ati/card0
+7f5a5b24a000-7f5a5b26a000 rw-s 0421c000 00:05 12127                      /dev/ati/card0
+7f5a5b26a000-7f5a5b26c000 rw-s 0421b000 00:05 12127                      /dev/ati/card0
+7f5a5b26c000-7f5a5b26e000 rw-s 0421a000 00:05 12127                      /dev/ati/card0
+7f5a5b26e000-7f5a5b274000 rw-s 04219000 00:05 12127                      /dev/ati/card0
+7f5a5b274000-7f5a5b27a000 rw-s 04218000 00:05 12127                      /dev/ati/card0
+7f5a5b27a000-7f5a5b27b000 ---p 00000000 00:00 0 
+7f5a5b27b000-7f5a5b2bb000 rw-p 00000000 00:00 0                          [stack:6421]
+7f5a5b2bb000-7f5a5b2db000 rw-s 04214000 00:05 12127                      /dev/ati/card0
+7f5a5b2db000-7f5a5b2fb000 rw-s 04213000 00:05 12127                      /dev/ati/card0
+7f5a5b2fb000-7f5a5b2fd000 rw-s 04212000 00:05 12127                      /dev/ati/card0
+7f5a5b2fd000-7f5a5b2ff000 rw-s 04211000 00:05 12127                      /dev/ati/card0
+7f5a5b2ff000-7f5a5b305000 rw-s 04210000 00:05 12127                      /dev/ati/card0
+7f5a5b305000-7f5a5b30b000 rw-s 0420f000 00:05 12127                      /dev/ati/card0
+7f5a5b30b000-7f5a5b30c000 ---p 00000000 00:00 0 
+7f5a5b30c000-7f5a5b34c000 rw-p 00000000 00:00 0                          [stack:6420]
+7f5a5b34c000-7f5a5b36c000 rw-s 0420b000 00:05 12127                      /dev/ati/card0
+7f5a5b36c000-7f5a5b38c000 rw-s 0420a000 00:05 12127                      /dev/ati/card0
+7f5a5b38c000-7f5a5b38e000 rw-s 04209000 00:05 12127                      /dev/ati/card0
+7f5a5b38e000-7f5a5b390000 rw-s 04208000 00:05 12127                      /dev/ati/card0
+7f5a5b390000-7f5a5b396000 rw-s 04207000 00:05 12127                      /dev/ati/card0
+7f5a5b396000-7f5a5b39c000 rw-s 04206000 00:05 12127                      /dev/ati/card0
+7f5a5b39c000-7f5a5b39d000 ---p 00000000 00:00 0 
+7f5a5b39d000-7f5a5b3dd000 rw-p 00000000 00:00 0                          [stack:6419]
+7f5a5b3dd000-7f5a5b3fd000 rw-s 04202000 00:05 12127                      /dev/ati/card0
+7f5a5b3fd000-7f5a5b41d000 rw-s 04201000 00:05 12127                      /dev/ati/card0
+7f5a5b41d000-7f5a5b41f000 rw-s 04200000 00:05 12127                      /dev/ati/card0
+7f5a5b41f000-7f5a5b421000 rw-s 041ff000 00:05 12127                      /dev/ati/card0
+7f5a5b421000-7f5a5b427000 rw-s 041fe000 00:05 12127                      /dev/ati/card0
+7f5a5b427000-7f5a5b42d000 rw-s 041fd000 00:05 12127                      /dev/ati/card0
+7f5a5b42d000-7f5a5b42e000 ---p 00000000 00:00 0 
+7f5a5b42e000-7f5a5b46e000 rw-p 00000000 00:00 0                          [stack:6418]
+7f5a5b46e000-7f5a5b48e000 rw-s 041f9000 00:05 12127                      /dev/ati/card0
+7f5a5b48e000-7f5a5b4ae000 rw-s 041f8000 00:05 12127                      /dev/ati/card0
+7f5a5b4ae000-7f5a5b4b0000 rw-s 041f7000 00:05 12127                      /dev/ati/card0
+7f5a5b4b0000-7f5a5b4b2000 rw-s 041f6000 00:05 12127                      /dev/ati/card0
+7f5a5b4b2000-7f5a5b4b8000 rw-s 041f5000 00:05 12127                      /dev/ati/card0
+7f5a5b4b8000-7f5a5b4be000 rw-s 041f4000 00:05 12127                      /dev/ati/card0
+7f5a5b4be000-7f5a5b4bf000 ---p 00000000 00:00 0 
+7f5a5b4bf000-7f5a5b4ff000 rw-p 00000000 00:00 0                          [stack:6417]
+7f5a5b4ff000-7f5a5b51f000 rw-s 041f0000 00:05 12127                      /dev/ati/card0
+7f5a5b51f000-7f5a5b53f000 rw-s 041ef000 00:05 12127                      /dev/ati/card0
+7f5a5b53f000-7f5a5b541000 rw-s 041ee000 00:05 12127                      /dev/ati/card0
+7f5a5b541000-7f5a5b547000 rw-s 041ec000 00:05 12127                      /dev/ati/card0
+7f5a5b547000-7f5a5b548000 ---p 00000000 00:00 0 
+7f5a5b548000-7f5a5b588000 rw-p 00000000 00:00 0                          [stack:6416]
+7f5a5b588000-7f5a5b5c8000 rw-s 03ae0000 00:05 12127                      /dev/ati/card0
+7f5a5b5c8000-7f5a5b5e8000 rw-s 041e7000 00:05 12127                      /dev/ati/card0
+7f5a5b5e8000-7f5a5b608000 rw-s 041e6000 00:05 12127                      /dev/ati/card0
+7f5a5b608000-7f5a5b628000 rw-s 03ad3000 00:05 12127                      /dev/ati/card0
+7f5a5b628000-7f5a5b6a8000 rw-s 03ab7000 00:05 12127                      /dev/ati/card0
+7f5a5b6a8000-7f5a5b728000 rw-s 03ab6000 00:05 12127                      /dev/ati/card0
+7f5a5b728000-7f5a5b729000 ---p 00000000 00:00 0 
+7f5a5b729000-7f5a5b769000 rw-p 00000000 00:00 0                          [stack:6415]
+7f5a5b769000-7f5a5b7a9000 rw-s 0026d000 00:05 12127                      /dev/ati/card0
+7f5a5b7a9000-7f5a5b852000 r-xp 00000000 08:08 5521259                    /usr/lib/fglrx/libGL.so.1.2
+7f5a5b852000-7f5a5b952000 ---p 000a9000 08:08 5521259                    /usr/lib/fglrx/libGL.so.1.2
+7f5a5b952000-7f5a5b988000 rwxp 000a9000 08:08 5521259                    /usr/lib/fglrx/libGL.so.1.2
+7f5a5b988000-7f5a5b9a5000 rwxp 00000000 00:00 0 
+7f5a5b9a5000-7f5a5b9a7000 r-xp 00000000 08:08 5512778                    /usr/lib/x86_64-linux-gnu/libXinerama.so.1.0.0
+7f5a5b9a7000-7f5a5bba6000 ---p 00002000 08:08 5512778                    /usr/lib/x86_64-linux-gnu/libXinerama.so.1.0.0
+7f5a5bba6000-7f5a5bba7000 r--p 00001000 08:08 5512778                    /usr/lib/x86_64-linux-gnu/libXinerama.so.1.0.0
+7f5a5bba7000-7f5a5bba8000 rw-p 00002000 08:08 5512778                    /usr/lib/x86_64-linux-gnu/libXinerama.so.1.0.0
+7f5a5bba8000-7f5a5c2a8000 rw-s 00006000 00:05 12127                      /dev/ati/card0
+7f5a5c2a8000-7f5a5f98f000 r-xp 00000000 08:08 5506635                    /usr/lib/libamdocl64.so
+7f5a5f98f000-7f5a5fb8f000 ---p 036e7000 08:08 5506635                    /usr/lib/libamdocl64.so
+7f5a5fb8f000-7f5a5fee3000 rw-p 036e7000 08:08 5506635                    /usr/lib/libamdocl64.so
+7f5a5fee3000-7f5a60000000 rw-p 00000000 00:00 0 
+7f5a60000000-7f5a6080e000 rw-p 00000000 00:00 0 
+7f5a6080e000-7f5a64000000 ---p 00000000 00:00 0 
+7f5a64000000-7f5a64c12000 rw-p 00000000 00:00 0 
+7f5a64c12000-7f5a68000000 ---p 00000000 00:00 0 
+7f5a68000000-7f5a6892e000 rw-p 00000000 00:00 0 
+7f5a6892e000-7f5a6c000000 ---p 00000000 00:00 0 
+7f5a6c000000-7f5a6c80e000 rw-p 00000000 00:00 0 
+7f5a6c80e000-7f5a70000000 ---p 00000000 00:00 0 
+7f5a70000000-7f5a70af5000 rw-p 00000000 00:00 0 
+7f5a70af5000-7f5a74000000 ---p 00000000 00:00 0 
+7f5a74000000-7f5a75141000 rw-p 00000000 00:00 0 
+7f5a75141000-7f5a78000000 ---p 00000000 00:00 0 
+7f5a78000000-7f5a78818000 rw-p 00000000 00:00 0 
+7f5a78818000-7f5a7c000000 ---p 00000000 00:00 0 
+7f5a7c000000-7f5a7c80f000 rw-p 00000000 00:00 0 
+7f5a7c80f000-7f5a80000000 ---p 00000000 00:00 0 
+7f5a80000000-7f5a8040c000 rw-p 00000000 00:00 0 
+7f5a8040c000-7f5a84000000 ---p 00000000 00:00 0 
+7f5a84000000-7f5a84813000 rw-p 00000000 00:00 0 
+7f5a84813000-7f5a88000000 ---p 00000000 00:00 0 
+7f5a88000000-7f5a88412000 rw-p 00000000 00:00 0 
+7f5a88412000-7f5a8c000000 ---p 00000000 00:00 0 
+7f5a8c000000-7f5a8c40c000 rw-p 00000000 00:00 0 
+7f5a8c40c000-7f5a90000000 ---p 00000000 00:00 0 
+7f5a90000000-7f5a9040c000 rw-p 00000000 00:00 0 
+7f5a9040c000-7f5a94000000 ---p 00000000 00:00 0 
+7f5a94000000-7f5a94002000 rw-s 041ed000 00:05 12127                      /dev/ati/card0
+7f5a94002000-7f5a94008000 rw-s 041eb000 00:05 12127                      /dev/ati/card0
+7f5a94008000-7f5a94028000 rw-s 03ad2000 00:05 12127                      /dev/ati/card0
+7f5a94028000-7f5a94068000 rw-s 00004000 00:05 12127                      /dev/ati/card0
+7f5a94068000-7f5a94079000 r-xp 00000000 08:08 5508960                    /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7f5a94079000-7f5a94278000 ---p 00011000 08:08 5508960                    /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7f5a94278000-7f5a94279000 r--p 00010000 08:08 5508960                    /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7f5a94279000-7f5a9427a000 rw-p 00011000 08:08 5508960                    /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7f5a9427a000-7f5a9427f000 r-xp 00000000 08:08 5512766                    /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7f5a9427f000-7f5a9447e000 ---p 00005000 08:08 5512766                    /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7f5a9447e000-7f5a9447f000 r--p 00004000 08:08 5512766                    /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7f5a9447f000-7f5a94480000 rw-p 00005000 08:08 5512766                    /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7f5a94480000-7f5a94482000 r-xp 00000000 08:08 5512755                    /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7f5a94482000-7f5a94682000 ---p 00002000 08:08 5512755                    /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7f5a94682000-7f5a94683000 r--p 00002000 08:08 5512755                    /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7f5a94683000-7f5a94684000 rw-p 00003000 08:08 5512755                    /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7f5a94684000-7f5a946a1000 r-xp 00000000 08:08 5513825                    /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7f5a946a1000-7f5a948a1000 ---p 0001d000 08:08 5513825                    /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7f5a948a1000-7f5a948a2000 r--p 0001d000 08:08 5513825                    /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7f5a948a2000-7f5a948a3000 rw-p 0001e000 08:08 5513825                    /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7f5a948a3000-7f5a949d3000 r-xp 00000000 08:08 5512751                    /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7f5a949d3000-7f5a94bd3000 ---p 00130000 08:08 5512751                    /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7f5a94bd3000-7f5a94bd4000 r--p 00130000 08:08 5512751                    /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7f5a94bd4000-7f5a94bd8000 rw-p 00131000 08:08 5512751                    /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7f5a94bd8000-7f5a94be8000 r-xp 00000000 08:08 5507133                    /usr/lib/libatiuki.so.1.0
+7f5a94be8000-7f5a94ce7000 ---p 00010000 08:08 5507133                    /usr/lib/libatiuki.so.1.0
+7f5a94ce7000-7f5a94cf7000 rw-p 0000f000 08:08 5507133                    /usr/lib/libatiuki.so.1.0
+7f5a94cf7000-7f5a94cf8000 rw-p 00000000 00:00 0 
+7f5a94cf8000-7f5a94da3000 r-xp 00000000 08:08 5506567                    /usr/lib/libatiadlxx.so
+7f5a94da3000-7f5a94ea2000 ---p 000ab000 08:08 5506567                    /usr/lib/libatiadlxx.so
+7f5a94ea2000-7f5a94ea5000 rw-p 000aa000 08:08 5506567                    /usr/lib/libatiadlxx.so
+7f5a94ea5000-7f5a94eb5000 rw-p 00000000 00:00 0 
+7f5a94eb6000-7f5a94eb8000 rw-s 041e5000 00:05 12127                      /dev/ati/card0
+7f5a94eb8000-7f5a94eba000 rw-s 041e4000 00:05 12127                      /dev/ati/card0
+7f5a94eba000-7f5a94ec0000 rw-s 041e3000 00:05 12127                      /dev/ati/card0
+7f5a94ec0000-7f5a94ec6000 rw-s 041e2000 00:05 12127                      /dev/ati/card0
+7f5a94ec6000-7f5a94ec8000 rw-s 03ad1000 00:05 12127                      /dev/ati/card0
+7f5a94ec8000-7f5a94eca000 rw-s 03ad0000 00:05 12127                      /dev/ati/card0
+7f5a94eca000-7f5a94ed0000 rw-s 03acf000 00:05 12127                      /dev/ati/card0
+7f5a94ed0000-7f5a94ed6000 rw-s 03ace000 00:05 12127                      /dev/ati/card0
+7f5a94ed6000-7f5a94edc000 r-xp 00000000 08:08 5506636                    /usr/lib/libOpenCL.so.1
+7f5a94edc000-7f5a950dc000 ---p 00006000 08:08 5506636                    /usr/lib/libOpenCL.so.1
+7f5a950dc000-7f5a950dd000 rw-p 00006000 08:08 5506636                    /usr/lib/libOpenCL.so.1
+7f5a950dd000-7f5a950f3000 r-xp 00000000 08:08 6819699                    /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f5a950f3000-7f5a952f2000 ---p 00016000 08:08 6819699                    /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f5a952f2000-7f5a952f3000 rw-p 00015000 08:08 6819699                    /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f5a952f3000-7f5a953d9000 r-xp 00000000 08:08 5507151                    /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19
+7f5a953d9000-7f5a955d8000 ---p 000e6000 08:08 5507151                    /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19
+7f5a955d8000-7f5a955e0000 r--p 000e5000 08:08 5507151                    /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19
+7f5a955e0000-7f5a955e2000 rw-p 000ed000 08:08 5507151                    /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19
+7f5a955e2000-7f5a955f7000 rw-p 00000000 00:00 0 
+7f5a955f7000-7f5a95615000 r-xp 00000000 08:08 5768420                    /tmp/libJOCL_0_1_9-linux-x86_64.so
+7f5a95615000-7f5a95815000 ---p 0001e000 08:08 5768420                    /tmp/libJOCL_0_1_9-linux-x86_64.so
+7f5a95815000-7f5a95816000 r--p 0001e000 08:08 5768420                    /tmp/libJOCL_0_1_9-linux-x86_64.so
+7f5a95816000-7f5a95817000 rw-p 0001f000 08:08 5768420                    /tmp/libJOCL_0_1_9-linux-x86_64.so
+7f5a95817000-7f5a95828000 r-xp 00000000 08:08 5650152                    /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libnio.so
+7f5a95828000-7f5a95a27000 ---p 00011000 08:08 5650152                    /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libnio.so
+7f5a95a27000-7f5a95a28000 rw-p 00010000 08:08 5650152                    /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libnio.so
+7f5a95a28000-7f5a95a3e000 r-xp 00000000 08:08 5650145                    /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libnet.so
+7f5a95a3e000-7f5a95c3e000 ---p 00016000 08:08 5650145                    /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libnet.so
+7f5a95c3e000-7f5a95c3f000 rw-p 00016000 08:08 5650145                    /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libnet.so
+7f5a95c3f000-7f5a95c40000 ---p 00000000 00:00 0 
+7f5a95c40000-7f5aa4000000 rw-p 00000000 00:00 0                          [stack:6264]
+7f5aa4000000-7f5aa4411000 rw-p 00000000 00:00 0 
+7f5aa4411000-7f5aa8000000 ---p 00000000 00:00 0 
+7f5aa8000000-7f5aa840d000 rw-p 00000000 00:00 0 
+7f5aa840d000-7f5aac000000 ---p 00000000 00:00 0 
+7f5aac000000-7f5aac40c000 rw-p 00000000 00:00 0 
+7f5aac40c000-7f5ab0000000 ---p 00000000 00:00 0 
+7f5ab0000000-7f5ab040d000 rw-p 00000000 00:00 0 
+7f5ab040d000-7f5ab4000000 ---p 00000000 00:00 0 
+7f5ab4000000-7f5ab4002000 rw-s 03ab5000 00:05 12127                      /dev/ati/card0
+7f5ab4002000-7f5ab4004000 rw-s 03ab4000 00:05 12127                      /dev/ati/card0
+7f5ab4004000-7f5ab400a000 rw-s 03ab3000 00:05 12127                      /dev/ati/card0
+7f5ab400a000-7f5ab4010000 rw-s 03ab2000 00:05 12127                      /dev/ati/card0
+7f5ab4010000-7f5ab4011000 rw-s 00005000 00:05 12127                      /dev/ati/card0
+7f5ab4011000-7f5ab4013000 rw-s 00002000 00:05 12127                      /dev/ati/card0
+7f5ab4013000-7f5ab401a000 r--s 00000000 08:08 5905358                    /usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache
+7f5ab401b000-7f5ab4034000 r--p 00000000 08:08 6559006                    /usr/share/locale-langpack/pt/LC_MESSAGES/libc.mo
+7f5ab4034000-7f5ab4056000 r--p 00000000 08:08 6559220                    /usr/share/locale-langpack/pt_BR/LC_MESSAGES/libc.mo
+7f5ab4056000-7f5ab4059000 ---p 00000000 00:00 0 
+7f5ab4059000-7f5ab40c0000 rw-p 00000000 00:00 0 
+7f5ab40c0000-7f5ab40ca000 r--s 00116000 08:08 5513574                    /usr/lib/jvm/java-8-oracle/jre/lib/ext/localedata.jar
+7f5ab40ca000-7f5ab40cc000 r--s 00056000 08:08 28450619                   /home/cezar/.m2/repository/org/jocl/jocl/0.1.9/jocl-0.1.9.jar
+7f5ab40cc000-7f5ab40d5000 r--s 00093000 08:08 27924287                   /home/cezar/.m2/repository/org/magicwerk/brownies-collections/0.9.12/brownies-collections-0.9.12.jar
+7f5ab40d5000-7f5ab40d9000 r--s 0002a000 08:08 23200918                   /home/cezar/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar
+7f5ab40d9000-7f5ab40dc000 ---p 00000000 00:00 0 
+7f5ab40dc000-7f5ab41da000 rw-p 00000000 00:00 0                          [stack:6263]
+7f5ab41da000-7f5ab41dd000 ---p 00000000 00:00 0 
+7f5ab41dd000-7f5ab42db000 rw-p 00000000 00:00 0                          [stack:6262]
+7f5ab42db000-7f5ab42de000 ---p 00000000 00:00 0 
+7f5ab42de000-7f5ab43dc000 rw-p 00000000 00:00 0                          [stack:6261]
+7f5ab43dc000-7f5ab43df000 ---p 00000000 00:00 0 
+7f5ab43df000-7f5ab44dd000 rw-p 00000000 00:00 0                          [stack:6260]
+7f5ab44dd000-7f5ab44e0000 ---p 00000000 00:00 0 
+7f5ab44e0000-7f5ab45de000 rw-p 00000000 00:00 0                          [stack:6257]
+7f5ab45de000-7f5ab45e1000 ---p 00000000 00:00 0 
+7f5ab45e1000-7f5ab46df000 rw-p 00000000 00:00 0                          [stack:6256]
+7f5ab46df000-7f5ab46e2000 ---p 00000000 00:00 0 
+7f5ab46e2000-7f5ab47e0000 rw-p 00000000 00:00 0                          [stack:6253]
+7f5ab47e0000-7f5ab47e4000 r-xp 00000000 08:08 5636304                    /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libdt_socket.so
+7f5ab47e4000-7f5ab49e3000 ---p 00004000 08:08 5636304                    /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libdt_socket.so
+7f5ab49e3000-7f5ab49e4000 rw-p 00003000 08:08 5636304                    /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libdt_socket.so
+7f5ab49e4000-7f5ab49e7000 ---p 00000000 00:00 0 
+7f5ab49e7000-7f5ab4ae5000 rw-p 00000000 00:00 0                          [stack:6251]
+7f5ab4ae5000-7f5ab4ae8000 ---p 00000000 00:00 0 
+7f5ab4ae8000-7f5ab4be6000 rw-p 00000000 00:00 0                          [stack:6249]
+7f5ab4be6000-7f5ab4be9000 ---p 00000000 00:00 0 
+7f5ab4be9000-7f5ab4ce7000 rw-p 00000000 00:00 0                          [stack:6248]
+7f5ab4ce7000-7f5ab4ce8000 ---p 00000000 00:00 0 
+7f5ab4ce8000-7f5ab5d88000 rw-p 00000000 00:00 0                          [stack:6247]
+7f5ab5d88000-7f5ab5f61000 r--s 03d20000 08:08 5514793                    /usr/lib/jvm/java-8-oracle/jre/lib/rt.jar
+7f5ab5f61000-7f5ab65b2000 rw-p 00000000 00:00 0 
+7f5ab65b2000-7f5ab6832000 ---p 00000000 00:00 0 
+7f5ab6832000-7f5ab765e000 rw-p 00000000 00:00 0 
+7f5ab765e000-7f5ab765f000 ---p 00000000 00:00 0 
+7f5ab765f000-7f5ab775f000 rw-p 00000000 00:00 0                          [stack:6246]
+7f5ab775f000-7f5ab7760000 ---p 00000000 00:00 0 
+7f5ab7760000-7f5ab7ab8000 rw-p 00000000 00:00 0                          [stack:6245]
+7f5ab7ab8000-7f5ab81d3000 ---p 00000000 00:00 0 
+7f5ab81d3000-7f5ab842b000 rw-p 00000000 00:00 0 
+7f5ab842b000-7f5ab8b45000 ---p 00000000 00:00 0 
+7f5ab8b45000-7f5ab8f86000 rw-p 00000000 00:00 0 
+7f5ab8f86000-7f5ab8fff000 ---p 00000000 00:00 0 
+7f5ab8fff000-7f5ab9000000 rw-p 00000000 00:00 0 
+7f5ab9000000-7f5ab93d0000 rwxp 00000000 00:00 0 
+7f5ab93d0000-7f5ac8000000 ---p 00000000 00:00 0 
+7f5ac8000000-7f5acc000000 rw-p 00000000 00:00 0 
+7f5acc000000-7f5acc042000 rw-p 00000000 00:00 0 
+7f5acc042000-7f5acc043000 ---p 00000000 00:00 0 
+7f5acc043000-7f5acc143000 rw-p 00000000 00:00 0                          [stack:6244]
+7f5acc143000-7f5acc144000 ---p 00000000 00:00 0 
+7f5acc144000-7f5acc254000 rw-p 00000000 00:00 0                          [stack:6243]
+7f5acc254000-7f5acc604000 ---p 00000000 00:00 0 
+7f5acc604000-7f5acc61e000 r-xp 00000000 08:08 5649917                    /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libzip.so
+7f5acc61e000-7f5acc81e000 ---p 0001a000 08:08 5649917                    /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libzip.so
+7f5acc81e000-7f5acc81f000 rw-p 0001a000 08:08 5649917                    /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libzip.so
+7f5acc81f000-7f5acc82a000 r-xp 00000000 08:08 6820300                    /lib/x86_64-linux-gnu/libnss_files-2.19.so
+7f5acc82a000-7f5acca29000 ---p 0000b000 08:08 6820300                    /lib/x86_64-linux-gnu/libnss_files-2.19.so
+7f5acca29000-7f5acca2a000 r--p 0000a000 08:08 6820300                    /lib/x86_64-linux-gnu/libnss_files-2.19.so
+7f5acca2a000-7f5acca2b000 rw-p 0000b000 08:08 6820300                    /lib/x86_64-linux-gnu/libnss_files-2.19.so
+7f5acca2b000-7f5acca36000 r-xp 00000000 08:08 6820320                    /lib/x86_64-linux-gnu/libnss_nis-2.19.so
+7f5acca36000-7f5accc35000 ---p 0000b000 08:08 6820320                    /lib/x86_64-linux-gnu/libnss_nis-2.19.so
+7f5accc35000-7f5accc36000 r--p 0000a000 08:08 6820320                    /lib/x86_64-linux-gnu/libnss_nis-2.19.so
+7f5accc36000-7f5accc37000 rw-p 0000b000 08:08 6820320                    /lib/x86_64-linux-gnu/libnss_nis-2.19.so
+7f5accc37000-7f5accc4e000 r-xp 00000000 08:08 6820309                    /lib/x86_64-linux-gnu/libnsl-2.19.so
+7f5accc4e000-7f5acce4d000 ---p 00017000 08:08 6820309                    /lib/x86_64-linux-gnu/libnsl-2.19.so
+7f5acce4d000-7f5acce4e000 r--p 00016000 08:08 6820309                    /lib/x86_64-linux-gnu/libnsl-2.19.so
+7f5acce4e000-7f5acce4f000 rw-p 00017000 08:08 6820309                    /lib/x86_64-linux-gnu/libnsl-2.19.so
+7f5acce4f000-7f5acce51000 rw-p 00000000 00:00 0 
+7f5acce51000-7f5acce5a000 r-xp 00000000 08:08 6820308                    /lib/x86_64-linux-gnu/libnss_compat-2.19.so
+7f5acce5a000-7f5acd059000 ---p 00009000 08:08 6820308                    /lib/x86_64-linux-gnu/libnss_compat-2.19.so
+7f5acd059000-7f5acd05a000 r--p 00008000 08:08 6820308                    /lib/x86_64-linux-gnu/libnss_compat-2.19.so
+7f5acd05a000-7f5acd05b000 rw-p 00009000 08:08 6820308                    /lib/x86_64-linux-gnu/libnss_compat-2.19.so
+7f5acd05b000-7f5acd73f000 r--p 00000000 08:08 5511763                    /usr/lib/locale/locale-archive
+7f5acd73f000-7f5acd741000 r-xp 00000000 08:08 5650134                    /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libnpt.so
+7f5acd741000-7f5acd941000 ---p 00002000 08:08 5650134                    /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libnpt.so
+7f5acd941000-7f5acd942000 rw-p 00002000 08:08 5650134                    /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libnpt.so
+7f5acd942000-7f5acd97b000 r-xp 00000000 08:08 5650137                    /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libjdwp.so
+7f5acd97b000-7f5acdb7a000 ---p 00039000 08:08 5650137                    /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libjdwp.so
+7f5acdb7a000-7f5acdb7c000 rw-p 00038000 08:08 5650137                    /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libjdwp.so
+7f5acdb7c000-7f5acdba6000 r-xp 00000000 08:08 5650149                    /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libjava.so
+7f5acdba6000-7f5acdda6000 ---p 0002a000 08:08 5650149                    /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libjava.so
+7f5acdda6000-7f5acdda8000 rw-p 0002a000 08:08 5650149                    /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libjava.so
+7f5acdda8000-7f5acddb5000 r-xp 00000000 08:08 5636295                    /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libverify.so
+7f5acddb5000-7f5acdfb5000 ---p 0000d000 08:08 5636295                    /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libverify.so
+7f5acdfb5000-7f5acdfb7000 rw-p 0000d000 08:08 5636295                    /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libverify.so
+7f5acdfb7000-7f5acdfbe000 r-xp 00000000 08:08 6820317                    /lib/x86_64-linux-gnu/librt-2.19.so
+7f5acdfbe000-7f5ace1bd000 ---p 00007000 08:08 6820317                    /lib/x86_64-linux-gnu/librt-2.19.so
+7f5ace1bd000-7f5ace1be000 r--p 00006000 08:08 6820317                    /lib/x86_64-linux-gnu/librt-2.19.so
+7f5ace1be000-7f5ace1bf000 rw-p 00007000 08:08 6820317                    /lib/x86_64-linux-gnu/librt-2.19.so
+7f5ace1bf000-7f5ace2c4000 r-xp 00000000 08:08 6820299                    /lib/x86_64-linux-gnu/libm-2.19.so
+7f5ace2c4000-7f5ace4c3000 ---p 00105000 08:08 6820299                    /lib/x86_64-linux-gnu/libm-2.19.so
+7f5ace4c3000-7f5ace4c4000 r--p 00104000 08:08 6820299                    /lib/x86_64-linux-gnu/libm-2.19.so
+7f5ace4c4000-7f5ace4c5000 rw-p 00105000 08:08 6820299                    /lib/x86_64-linux-gnu/libm-2.19.so
+7f5ace4c5000-7f5acf183000 r-xp 00000000 08:08 5650157                    /usr/lib/jvm/java-8-oracle/jre/lib/amd64/server/libjvm.so
+7f5acf183000-7f5acf382000 ---p 00cbe000 08:08 5650157                    /usr/lib/jvm/java-8-oracle/jre/lib/amd64/server/libjvm.so
+7f5acf382000-7f5acf45b000 rw-p 00cbd000 08:08 5650157                    /usr/lib/jvm/java-8-oracle/jre/lib/amd64/server/libjvm.so
+7f5acf45b000-7f5acf49f000 rw-p 00000000 00:00 0 
+7f5acf49f000-7f5acf65a000 r-xp 00000000 08:08 6820314                    /lib/x86_64-linux-gnu/libc-2.19.so
+7f5acf65a000-7f5acf859000 ---p 001bb000 08:08 6820314                    /lib/x86_64-linux-gnu/libc-2.19.so
+7f5acf859000-7f5acf85d000 r--p 001ba000 08:08 6820314                    /lib/x86_64-linux-gnu/libc-2.19.so
+7f5acf85d000-7f5acf85f000 rw-p 001be000 08:08 6820314                    /lib/x86_64-linux-gnu/libc-2.19.so
+7f5acf85f000-7f5acf864000 rw-p 00000000 00:00 0 
+7f5acf864000-7f5acf867000 r-xp 00000000 08:08 6820303                    /lib/x86_64-linux-gnu/libdl-2.19.so
+7f5acf867000-7f5acfa66000 ---p 00003000 08:08 6820303                    /lib/x86_64-linux-gnu/libdl-2.19.so
+7f5acfa66000-7f5acfa67000 r--p 00002000 08:08 6820303                    /lib/x86_64-linux-gnu/libdl-2.19.so
+7f5acfa67000-7f5acfa68000 rw-p 00003000 08:08 6820303                    /lib/x86_64-linux-gnu/libdl-2.19.so
+7f5acfa68000-7f5acfa7d000 r-xp 00000000 08:08 6041307                    /usr/lib/jvm/java-8-oracle/lib/amd64/jli/libjli.so
+7f5acfa7d000-7f5acfc7d000 ---p 00015000 08:08 6041307                    /usr/lib/jvm/java-8-oracle/lib/amd64/jli/libjli.so
+7f5acfc7d000-7f5acfc7e000 rw-p 00015000 08:08 6041307                    /usr/lib/jvm/java-8-oracle/lib/amd64/jli/libjli.so
+7f5acfc7e000-7f5acfc97000 r-xp 00000000 08:08 6820315                    /lib/x86_64-linux-gnu/libpthread-2.19.so
+7f5acfc97000-7f5acfe96000 ---p 00019000 08:08 6820315                    /lib/x86_64-linux-gnu/libpthread-2.19.so
+7f5acfe96000-7f5acfe97000 r--p 00018000 08:08 6820315                    /lib/x86_64-linux-gnu/libpthread-2.19.so
+7f5acfe97000-7f5acfe98000 rw-p 00019000 08:08 6820315                    /lib/x86_64-linux-gnu/libpthread-2.19.so
+7f5acfe98000-7f5acfe9c000 rw-p 00000000 00:00 0 
+7f5acfe9c000-7f5acfebf000 r-xp 00000000 08:08 6820311                    /lib/x86_64-linux-gnu/ld-2.19.so
+7f5acfebf000-7f5acff96000 rw-p 00000000 00:00 0 
+7f5acff96000-7f5acff99000 ---p 00000000 00:00 0 
+7f5acff99000-7f5ad009b000 rw-p 00000000 00:00 0                          [stack:6241]
+7f5ad009b000-7f5ad009c000 r--p 00000000 00:00 0 
+7f5ad009c000-7f5ad00a3000 r--s 00054000 08:08 26349477                   /home/cezar/workspaces/workspace-sagicon-ppd/ppd/JOCL-structs-0.0.1a-alpha.jar
+7f5ad00a3000-7f5ad00b2000 r--s 00079000 08:08 26349484                   /home/cezar/workspaces/workspace-sagicon-ppd/ppd/aparapi.jar
+7f5ad00b2000-7f5ad00ba000 rw-s 00000000 08:08 5768419                    /tmp/hsperfdata_cezar/6236
+7f5ad00ba000-7f5ad00bb000 rw-p 00000000 00:00 0 
+7f5ad00bb000-7f5ad00bc000 r--p 00000000 00:00 0 
+7f5ad00bc000-7f5ad00be000 rw-p 00000000 00:00 0 
+7f5ad00be000-7f5ad00bf000 r--p 00022000 08:08 6820311                    /lib/x86_64-linux-gnu/ld-2.19.so
+7f5ad00bf000-7f5ad00c0000 rw-p 00023000 08:08 6820311                    /lib/x86_64-linux-gnu/ld-2.19.so
+7f5ad00c0000-7f5ad00c1000 rw-p 00000000 00:00 0 
+7ffdb423e000-7ffdb425f000 rw-p 00000000 00:00 0                          [stack]
+7ffdb4296000-7ffdb4298000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -agentlib:jdwp=transport=dt_socket,suspend=y,address=localhost:57642 -Xmx7256m -Dfile.encoding=UTF-8 
+java_command: br.ufg.inf.ppd.app.Main br.ufg.inf.ppd.tarefa.TarefaGPUOpenCL
+java_class_path (initial): /home/cezar/workspaces/workspace-sagicon-ppd/ppd/target/classes:/home/cezar/workspaces/workspace-sagicon-ppd/ppd/aparapi.jar:/home/cezar/workspaces/workspace-sagicon-ppd/ppd/JOCL-structs-0.0.1a-alpha.jar:/home/cezar/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar:/home/cezar/.m2/repository/org/magicwerk/brownies-collections/0.9.12/brownies-collections-0.9.12.jar:/home/cezar/.m2/repository/org/jocl/jocl/0.1.9/jocl-0.1.9.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+LD_LIBRARY_PATH=/opt/AMDAPPSDK-3.0/lib/x86_64/:/usr/lib32
+SHELL=/bin/bash
+DISPLAY=:0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0xaba2a0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.so+0xaba2a0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGFPE: [libamdocl64.so+0x5c24c0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGPIPE: [libjvm.so+0x917710], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGXFSZ: [libjvm.so+0x917710], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGILL: [libjvm.so+0x917710], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGUSR1: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGUSR2: [libjvm.so+0x918d40], sa_mask[0]=00100000000000000000000000000000, sa_flags=SA_RESTART|SA_SIGINFO
+SIGHUP: [libjvm.so+0x91a140], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGINT: [libjvm.so+0x91a140], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGTERM: [libjvm.so+0x91a140], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGQUIT: [libjvm.so+0x91a140], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+
+
+---------------  S Y S T E M  ---------------
+
+OS:DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=14.04
+DISTRIB_CODENAME=trusty
+DISTRIB_DESCRIPTION="Ubuntu 14.04.3 LTS"
+
+uname:Linux 3.13.0-71-generic #114-Ubuntu SMP Tue Dec 1 02:34:22 UTC 2015 x86_64
+libc:glibc 2.19 NPTL 2.19 
+rlimit: STACK 8192k, CORE 0k, NPROC 126719, NOFILE 4096, AS infinity
+load average:1,08 0,76 0,65
+
+/proc/meminfo:
+MemTotal:       16312276 kB
+MemFree:          238764 kB
+Buffers:          120092 kB
+Cached:          8856256 kB
+SwapCached:            0 kB
+Active:          7576876 kB
+Inactive:        7497112 kB
+Active(anon):    6075208 kB
+Inactive(anon):   114976 kB
+Active(file):    1501668 kB
+Inactive(file):  7382136 kB
+Unevictable:          72 kB
+Mlocked:              72 kB
+SwapTotal:       3999740 kB
+SwapFree:        3999740 kB
+Dirty:                36 kB
+Writeback:             0 kB
+AnonPages:       6097540 kB
+Mapped:           547992 kB
+Shmem:             92544 kB
+Slab:             261044 kB
+SReclaimable:     215800 kB
+SUnreclaim:        45244 kB
+KernelStack:        7176 kB
+PageTables:        63632 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    12155876 kB
+Committed_AS:   12750576 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:      604800 kB
+VmallocChunk:   34359113204 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:   4048896 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:      556480 kB
+DirectMap2M:    10856448 kB
+DirectMap1G:     5242880 kB
+
+
+CPU:total 4 (2 cores per cpu, 2 threads per core) family 6 model 69 stepping 1, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 69
+model name	: Intel(R) Core(TM) i7-4510U CPU @ 2.00GHz
+stepping	: 1
+microcode	: 0x1c
+cpu MHz		: 754.000
+cache size	: 4096 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 2
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 fma cx16 xtpr pdcm pcid sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm ida arat epb xsaveopt pln pts dtherm tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid
+bogomips	: 5188.11
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 69
+model name	: Intel(R) Core(TM) i7-4510U CPU @ 2.00GHz
+stepping	: 1
+microcode	: 0x1c
+cpu MHz		: 754.000
+cache size	: 4096 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 2
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 fma cx16 xtpr pdcm pcid sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm ida arat epb xsaveopt pln pts dtherm tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid
+bogomips	: 5188.11
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 69
+model name	: Intel(R) Core(TM) i7-4510U CPU @ 2.00GHz
+stepping	: 1
+microcode	: 0x1c
+cpu MHz		: 2500.000
+cache size	: 4096 KB
+physical id	: 0
+siblings	: 4
+core id		: 1
+cpu cores	: 2
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 fma cx16 xtpr pdcm pcid sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm ida arat epb xsaveopt pln pts dtherm tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid
+bogomips	: 5188.11
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 69
+model name	: Intel(R) Core(TM) i7-4510U CPU @ 2.00GHz
+stepping	: 1
+microcode	: 0x1c
+cpu MHz		: 754.000
+cache size	: 4096 KB
+physical id	: 0
+siblings	: 4
+core id		: 1
+cpu cores	: 2
+apicid		: 3
+initial apicid	: 3
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 fma cx16 xtpr pdcm pcid sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm ida arat epb xsaveopt pln pts dtherm tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid
+bogomips	: 5188.11
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 16312276k(238764k free), swap 3999740k(3999740k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.66-b17) for linux-amd64 JRE (1.8.0_66-b17), built on Oct  6 2015 17:28:34 by "java_re" with gcc 4.3.0 20080428 (Red Hat 4.3.0-8)
+
+time: Wed Dec  9 03:05:24 2015
+elapsed time: 634 seconds (0d 0h 10m 34s)
+
